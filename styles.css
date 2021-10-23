@@ -1,3 +1,8 @@
+html {
+    margin: 0;
+    padding: 0; 
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -39,7 +44,7 @@ nav {
     top: 0;
     z-index: 10;
     background-color: #0e061e;
-    background: linear-gradient(#0e061e, #2e2d55);
+    border-bottom: 1px solid #cdbbec;
     width: 100%;
 }
 
@@ -78,16 +83,53 @@ section {
 .about-me {
     display: grid;
     grid-template: repeat(12, 1fr) / repeat(2, 1fr);
+    position: relative;
+    top: 50px;
+    background-color: #1e294b;
+}
+
+.filler {
+    grid-area: 1 / 1 / 4 / 2;
+    background-color: #2f3d6b;
+    padding: 0;
+    margin: 0;
 }
 
 .about-me h2 {
-    grid-area: 1 / 1 / 4 / 3;
+    grid-area: 1 / 2 / 4 / 3;
     display: flex;
     align-items: center;
-    padding-right: 20px;
-    color: #101224;
+    justify-content: center;
+    color: #afb4df;
     background-color: #2f3d6b;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 3rem;
+    font-size: 6rem;
+    
+    margin: 0;
+    padding: 0;
+}
+
+.about-me figure {
+    grid-area: 2 / 1 / 10 / 2;
+    background-color: aliceblue;
+    margin: 0px 40px;
+    z-index: 2;
+}
+
+.blurb {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-size: 1.25rem;
+    color: #888dbe;
+    grid-area: 4 / 2 / 9 / 3;
+    margin: 20px 40px;
+}
+
+.blurb p, .blurb ul {
+    margin: 0;
+}
+
+.about-me button {
+    grid-area: 10 / 2 / 12 / 3;
+    width: 50%;
 }
