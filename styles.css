@@ -77,26 +77,26 @@ h2 {
 
 section {
     width: 100%;
-    height: 950px;
+    height: 850px;
 }
 
 .about-me {
     display: grid;
-    grid-template: repeat(12, 1fr) / repeat(2, 1fr);
+    grid-template: repeat(10, 1fr) / repeat(2, 1fr);
     position: relative;
     top: 50px;
     background-color: #1e294b;
 }
 
 .filler {
-    grid-area: 1 / 1 / 4 / 2;
+    grid-area: 1 / 1 / 3 / 2;
     background-color: #2f3d6b;
     padding: 0;
     margin: 0;
 }
 
 .about-me h2 {
-    grid-area: 1 / 2 / 4 / 3;
+    grid-area: 1 / 2 / 3 / 3;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -121,7 +121,7 @@ section {
     font-family: 'Atkinson Hyperlegible', sans-serif;
     font-size: 1.25rem;
     color: #888dbe;
-    grid-area: 4 / 2 / 9 / 3;
+    grid-area: 3 / 2 / 9 / 3;
     margin: 20px 40px;
 }
 
@@ -130,6 +130,6 @@ section {
 }
 
 .about-me button {
-    grid-area: 10 / 2 / 12 / 3;
+    grid-area: 9 / 2 / 10 / 3;
     width: 50%;
 }
