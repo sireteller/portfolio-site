@@ -1,6 +1,7 @@
 html {
     margin: 0;
     padding: 0; 
+    scroll-behavior: smooth;
 }
 
 body {
@@ -11,7 +12,7 @@ body {
 
 .banner {
     margin: 0;
-    background-image: url('./images/lilac-cropped.png');
+    background-image: url('./images/lilac-cropped-fade.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -23,20 +24,27 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    flex-direction: column;
 }
 
 h1 {
-    padding: 40px;
+    padding: 40px 0;
+    width: 100%;
     color: #0e061e;
-    border-bottom: 5px solid #0e061e;
+    border-bottom: 5px solid #ffffff;
+    border-top: 5px solid #ffffff;
     background-color: #cdbbec80;
     /*background: radial-gradient(circle, hsl(262, 57%, 83%) 0%, hsla(259, 33%, 21%, 0) 100%);*/
-    text-shadow: 5px 5px #634e97;
+    /*text-shadow: 5px 5px #634e97;*/
     font-size: 7rem;
-    text-transform: uppercase;
-    font-family: 'Cinzel Decorative', 'Lucida Bright', 'Times New Roman', serif;
+    /*text-transform: uppercase;*/
+    font-family: 'Italianno', 'Lucida Bright', 'Times New Roman', serif;
     font-weight: 400;
     z-index: 1000;
+}
+
+.banner-buttons {
+    display: flex;
 }
 
 nav {
@@ -57,7 +65,7 @@ nav ul {
     display: flex;
     z-index: 10;
     color:#cdbbec;
-    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-family: 'Philosopher', 'Lucida Bright', 'Times New Roman', serif;
     font-weight: 200;
     font-size: 1.5rem;
     font-style: italic;
@@ -72,7 +80,7 @@ nav li:hover {
 }
 
 h2 {
-    font-family: 'Philosopher', 'Times New Roman', serif;
+    font-family: 'Philosopher', 'Lucida Bright', 'Times New Roman', serif;
 }
 
 section {
