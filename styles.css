@@ -11,7 +11,8 @@ body {
 }
 
 .banner-bg {
-    background-image: url('./images/lilac.jpg');
+    background-color: #1104278c;
+    background: linear-gradient(#1104278c, #1104278c), url('./images/lilac.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -42,26 +43,30 @@ h1 {
     /* border-bottom: 5px solid #ffffff;
     border-top: 5px solid #ffffff; */
     background-color: #cdbbec;
-    /*background: radial-gradient(circle, hsl(262, 57%, 83%) 0%, hsla(259, 33%, 21%, 0) 100%);*/
-    /*text-shadow: 5px 5px #634e97;*/
+    text-shadow: 5px 5px #ffffff;
     font-size: 7rem;
     /*text-transform: uppercase;*/
-    font-family: 'Italianno', 'Lucida Bright', 'Times New Roman', serif;
-    font-weight: 400;
+    font-family: 'Cinzel', 'Lucida Bright', 'Times New Roman', serif;
+    font-weight: 700;
     z-index: 1000;
     margin: 0;
 }
 
 .banner span {
-    font-family: 'Philosopher', 'Lucida Bright', 'Times New Roman', serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 1.25rem;
-    color: #231147;
+    font-weight: 600;
+    color: #0e061e;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: #cdbbeca4;
-    padding: 10px 0;
+    background-color: #cdbbecb6;
+    padding: 20px 0;
+}
+
+.banner i {
+    margin: 0 10px;
 }
 
 .banner-buttons {
@@ -71,7 +76,7 @@ h1 {
 }
 
 .banner-buttons-container {
-    background-color: #cdbbec5b;
+    background-color: #cdbbec75;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -89,9 +94,27 @@ h1 {
     width: 200px;
     height: 50px;
     border-radius: 40px 0;
-    box-shadow: 3px 3px #081b02;
-    font-size: 1.25rem;
+    border-top: 2px solid #6a9c53;
+    box-shadow: 0px 5px #081b02, 10px 0px #081b02, 10px 5px #081b02;
+    font-size: 1.5rem;
     font-family: 'Philosopher', 'Lucida Bright', 'Times New Roman', serif;
+    font-weight: 500;
+    transition: all 150ms ease-in 0.1s;
+}
+
+.button-banner:hover {
+    background-color: #4b8033;
+    color: #ffffff;
+    transition: all 0s ease-in 0s;
+}
+
+.button-banner:active {
+    background-color: #143a05;
+    color: #92c484;
+    position: relative;
+    left: 10px;
+    top: 5px;
+    box-shadow: 0px;
 }
 
 nav {
@@ -128,11 +151,29 @@ nav li:hover {
 
 h2 {
     font-family: 'Philosopher', 'Lucida Bright', 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.anchor {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 0;
+    position: relative;
+    bottom: 95px;
 }
 
 section {
     width: 100%;
     height: 850px;
+    margin: 0;
+    padding: 0;
 }
 
 .about-me {
@@ -160,9 +201,6 @@ section {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 6rem;
-    
-    margin: 0;
-    padding: 0;
 }
 
 .about-me figure {
@@ -173,7 +211,7 @@ section {
 }
 
 .blurb {
-    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 1.25rem;
     color: #888dbe;
     grid-area: 3 / 2 / 9 / 3;
