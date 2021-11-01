@@ -10,9 +10,17 @@ body {
     background-color: #0e061e;
 }
 
+.banner-bg {
+    background-image: url('./images/lilac.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 100%;
+}
+
 .banner {
     margin: 0;
-    background-image: url('./images/lilac-cropped-fade.png');
+    background-image: url('./images/lilac-cropped.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -31,9 +39,9 @@ h1 {
     padding: 40px 0;
     width: 100%;
     color: #0e061e;
-    border-bottom: 5px solid #ffffff;
-    border-top: 5px solid #ffffff;
-    background-color: #cdbbec80;
+    /* border-bottom: 5px solid #ffffff;
+    border-top: 5px solid #ffffff; */
+    background-color: #cdbbec;
     /*background: radial-gradient(circle, hsl(262, 57%, 83%) 0%, hsla(259, 33%, 21%, 0) 100%);*/
     /*text-shadow: 5px 5px #634e97;*/
     font-size: 7rem;
@@ -41,30 +49,69 @@ h1 {
     font-family: 'Italianno', 'Lucida Bright', 'Times New Roman', serif;
     font-weight: 400;
     z-index: 1000;
+    margin: 0;
+}
+
+.banner span {
+    font-family: 'Philosopher', 'Lucida Bright', 'Times New Roman', serif;
+    font-size: 1.25rem;
+    color: #231147;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #cdbbeca4;
+    padding: 10px 0;
 }
 
 .banner-buttons {
     display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.banner-buttons-container {
+    background-color: #cdbbec5b;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.button-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1d5706;
+    color: #b8e2ac;
+    text-decoration: none;
+    width: 200px;
+    height: 50px;
+    border-radius: 40px 0;
+    box-shadow: 3px 3px #081b02;
+    font-size: 1.25rem;
+    font-family: 'Philosopher', 'Lucida Bright', 'Times New Roman', serif;
 }
 
 nav {
     position: fixed;
     top: 0;
     z-index: 10;
-    background-color: #0e061e;
-    border-bottom: 1px solid #cdbbec;
+    background-color: #1d5706;
+    border-bottom: 1px solid #b8e2ac;
     width: 100%;
 }
 
 nav a {
     text-decoration: none;
-    color:#cdbbec;
+    color:#b8e2ac;
 }
 
 nav ul {
     display: flex;
     z-index: 10;
-    color:#cdbbec;
+    color:#b8e2ac;
     font-family: 'Philosopher', 'Lucida Bright', 'Times New Roman', serif;
     font-weight: 200;
     font-size: 1.5rem;
