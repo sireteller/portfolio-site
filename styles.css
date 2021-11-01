@@ -179,6 +179,12 @@ nav a:hover {
     color: #ffffff;
 }
 
+nav li:active,
+nav a:active {
+    background-color: #143a05;
+    color: #92c484;
+}
+
 h2 {
     font-family: 'Philosopher', 'Lucida Bright', 'Times New Roman', serif;
     margin: 0;
@@ -253,6 +259,17 @@ section {
 .about-me button {
     grid-area: 9 / 2 / 10 / 3;
     width: 50%;
+    background-color: #888dbe;
+    color: #121b3a;
+    border-radius: 50px 0;
+    border-left: none;
+    border-top: solid 4px #afb4df;
+    border-right: none;
+    border-bottom: none;
+    font-family: 'Philosopher', 'Times New Roman', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    box-shadow: 0px 5px #091027, 10px 0px #091027, 10px 5px #091027;
 }
 
 .best-works {
