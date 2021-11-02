@@ -142,7 +142,7 @@ h1 {
     position: relative;
     left: 10px;
     top: 5px;
-    box-shadow: 0px;
+    box-shadow: none;
 }
 
 nav {
@@ -246,14 +246,10 @@ nav a:active {
 
 .blurb {
     font-family: 'Raleway', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     color: #888dbe;
     grid-area: 3 / 2 / 9 / 3;
     margin: 20px 40px;
-}
-
-.blurb p, .blurb ul {
-    margin: 0;
 }
 
 .about-me button {
@@ -291,6 +287,7 @@ nav a:active {
 
 .contact h2 {
     background-color: #75415c;
+    grid-area: 1 / 1 / 3 / 3;
 }
 
 footer {
