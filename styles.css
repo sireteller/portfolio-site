@@ -294,7 +294,6 @@ nav a:active {
     height: 100%;
     z-index: 2;
     overflow: hidden;
-    background-color: blueviolet;
 }
 
 .pictures figure {
@@ -316,7 +315,7 @@ nav a:active {
 
 .pictures figcaption {
     height: 5%;
-    padding: 0;
+    padding: 10px;
     margin: 0;
     font-family: 'Raleway', sans-serif;
     font-size: 1.3rem;
@@ -325,14 +324,22 @@ nav a:active {
 
 .photo {
     position: relative;
-    right: 2000px;
-    background-color: aliceblue;
+    right: 10000px;
 }
 
 .drawing {
     position: relative;
     left: 25%;
-    background-color: blue;
+}
+
+.photo-switch {
+    position: relative;
+    right: 10000px;
+}
+
+.drawing-switch {
+    position: relative;
+    right: 0;
 }
 
 /* ****BEST WORKS SECTION STYLES**** */
