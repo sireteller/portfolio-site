@@ -249,7 +249,7 @@ nav a:active {
     font-size: 1.4rem;
     color: #888dbe;
     grid-area: 3 / 2 / 9 / 3;
-    margin: 20px 40px;
+    margin: 20px 40px 20px 0;
 }
 
 .about-me button {
@@ -322,24 +322,26 @@ nav a:active {
     color: #888dbe;
 }
 
-.photo {
+#photo {
     position: relative;
     right: 10000px;
 }
 
-.drawing {
+#drawing {
     position: relative;
     left: 25%;
 }
 
-.photo-switch {
+#photo-switch {
     position: relative;
     right: 10000px;
+    transition: right 0s ease-in 0s;
 }
 
-.drawing-switch {
+#drawing-switch {
     position: relative;
     right: 0;
+    transition: right 0s ease-in 0s;
 }
 
 /* ****BEST WORKS SECTION STYLES**** */
