@@ -1,3 +1,7 @@
+/* ****GLOBAL STYLES**** */
+
+/* !!ALICEBLUE IS A PLACEHOLDER COLOR!! */
+
 html {
     margin: 0;
     padding: 0; 
@@ -12,6 +16,9 @@ body {
 
 h2 {
     font-family: 'Philosopher', 'Lucida Bright', 'Times New Roman', serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 6rem;
     margin: 0;
     padding: 0;
 }
@@ -36,6 +43,8 @@ section {
     margin: 0;
     padding: 0;
 }
+
+/* ****BANNER STYLES**** */
 
 .banner-bg {
     background-color: #1104278c;
@@ -68,12 +77,9 @@ h1 {
     padding: 40px 0;
     width: 100%;
     color: #cdbbec;
-    /* border-bottom: 5px solid #ffffff;
-    border-top: 5px solid #ffffff; */
     background-color: #0e061e;
     text-shadow: 5px 5px #452261;
     font-size: 7rem;
-    /*text-transform: uppercase;*/
     font-family: 'Cinzel', 'Lucida Bright', 'Times New Roman', serif;
     font-weight: 700;
     z-index: 1000;
@@ -145,6 +151,8 @@ h1 {
     box-shadow: none;
 }
 
+/* ****NAV BAR STYLES**** */
+
 nav {
     position: fixed;
     top: 0;
@@ -212,6 +220,8 @@ nav a:active {
     color: #92c484;
 }
 
+/* ****ABOUT ME SECTION STYLES**** */
+
 .about-me {
     display: grid;
     grid-template: repeat(10, 1fr) / repeat(2, 1fr);
@@ -232,9 +242,6 @@ nav a:active {
     justify-content: center;
     color: #afb4df;
     background-color: #2f3d6b;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 6rem;
 }
 
 .about-me figure {
@@ -266,7 +273,28 @@ nav a:active {
     font-size: 1.5rem;
     font-weight: 700;
     box-shadow: 0px 5px #091027, 10px 0px #091027, 10px 5px #091027;
+    transition: all 150ms ease-in-out 0.1s;
 }
+
+.about-me button:hover {
+    background-color: #9197d3;
+    color: #1a254d;
+    transition: all 0s ease-in 0s;
+    cursor: pointer;
+}
+
+.about-me button:active {
+    background-color: #393f72;
+    color: #121b3a;
+    position: relative;
+    left: 10px;
+    top: 5px;
+    box-shadow: none;
+}
+
+
+
+/* ****BEST WORKS SECTION STYLES**** */
 
 .best-works {
     display: grid;
@@ -275,9 +303,114 @@ nav a:active {
 }
 
 .heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     grid-area: 1 / 1 / 3 / 3;
     background-color: #563f6b;
+    color: #bb9dd8;
+    font-family: 'Philosopher', 'Lucida Bright', 'Times New Roman', serif;
 }
+
+.best-works h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.best-works h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Philosopher', 'Lucida Bright', 'Times New Roman', serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #8f70aa;
+}
+
+.webpages h4 {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.artwork h4 {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    height: 100%;
+}
+
+.carousel {
+    background-color: aliceblue;
+    width: 90%;
+    height: 90%;
+}
+
+.see-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.see-more a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8f70aa;
+    color: #3b2252;
+    text-decoration: none;
+    width: 200px;
+    height: 50px;
+    border-radius: 40px 0;
+    border-top: 2px solid #bb9dd8;
+    box-shadow: 0px 5px #211031, 10px 0px #211031, 10px 5px #211031;
+    font-size: 1.5rem;
+    font-family: 'Philosopher', 'Lucida Bright', 'Times New Roman', serif;
+    font-weight: 600;
+    transition: all 150ms ease-in-out 0.1s;
+}
+
+.see-more a:hover {
+    background-color: #a483c0;
+    color: #51326e;
+    transition: all 0s ease-in 0s;
+}
+
+.see-more a:active {
+    background-color: #3b2252;
+    color: #000000;
+    position: relative;
+    left: 10px;
+    top: 5px;
+    box-shadow: none;
+}
+
+.web-gallery {
+    grid-area: 4 / 1 / 9 / 2;
+}
+
+.web-see-more {
+    grid-area: 9 / 1 / 10 / 2;
+}
+
+.art-gallery {
+    grid-area: 4 / 2 / 9 / 3;
+}
+
+.art-see-more {
+    grid-area: 9 / 2 / 10 / 3;
+}
+
+/* ****CONTACT ME SECTION STYLES**** */
 
 .contact {
     display: grid;
@@ -286,9 +419,14 @@ nav a:active {
 }
 
 .contact h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #75415c;
     grid-area: 1 / 1 / 3 / 3;
 }
+
+/* ****FOOTER**** */
 
 footer {
     display: flex;
