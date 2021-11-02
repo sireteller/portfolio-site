@@ -1,6 +1,6 @@
 /* ****GLOBAL STYLES**** */
 
-/* !!ALICEBLUE IS A PLACEHOLDER COLOR!! */
+/* !!ALICEBLUE, BLUEVIOLET AND BLUE ARE PLACEHOLDER COLORS!! */
 
 html {
     margin: 0;
@@ -244,13 +244,6 @@ nav a:active {
     background-color: #2f3d6b;
 }
 
-.about-me figure {
-    grid-area: 2 / 1 / 10 / 2;
-    background-color: aliceblue;
-    margin: 0px 40px;
-    z-index: 2;
-}
-
 .blurb {
     font-family: 'Raleway', sans-serif;
     font-size: 1.4rem;
@@ -292,7 +285,55 @@ nav a:active {
     box-shadow: none;
 }
 
+.about-me .pictures {
+    grid-area: 2 / 1 / 10 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    overflow: hidden;
+    background-color: blueviolet;
+}
 
+.pictures figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.pictures img {
+    height: 95%;
+    padding: 0;
+    margin: 0;
+}
+
+.pictures figcaption {
+    height: 5%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.3rem;
+    color: #888dbe;
+}
+
+.photo {
+    position: relative;
+    right: 2000px;
+    background-color: aliceblue;
+}
+
+.drawing {
+    position: relative;
+    left: 25%;
+    background-color: blue;
+}
 
 /* ****BEST WORKS SECTION STYLES**** */
 
