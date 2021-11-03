@@ -69,7 +69,9 @@
                 Creating digital art is my main hobby and right now I'm independetly learning front end development online. 
                 The creative aspect was the main reason why I was drawn to it at first, but now I'm also really enjoying learning about how the web works. <br><br>
 
-                This page is meant to be a testament to my ever-improving skills in HTML, CSS and JavaScript. I really hope you like what you see.
+                This page is meant to be a testament to my ever-improving skills in HTML, CSS and JavaScript. While I know that there are many fantastic frameworks out there,
+                I decided to challenge myself by only using vanilla HTML, CSS and JS to build this page.
+                I really hope you like what you see.
             </p>
         </div>
 
@@ -86,7 +88,15 @@
 
         <h4 class="webpages">Webpages</h4>
         <div class="web-gallery gallery">
-            <div class="carousel"></div>
+            <div class="carousel">
+                <div class="left-arrow-container">
+                    <i class="fas fa-chevron-left" id="arrow-left-web"></i>
+                </div>
+
+                <div class="right-arrow-container">
+                    <i class="fas fa-chevron-right" id="arrow-right-web"></i>
+                </div>
+            </div>
         </div>
         <div class="web-see-more see-more">
             <a href="./projects.html" target="blank">See more</a>
@@ -95,7 +105,27 @@
 
         <h4 class="artwork">Artwork</h4>
         <div class="art-gallery gallery">
-            <div class="carousel"></div>
+            <div class="carousel">
+                <div class="left-arrow-container" id="arrow-left-art">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="shade"></div>
+                <div class="images-container">
+                    <div id="art-1-container" class="single-container">
+                        <img src="./images/aileen1.png" alt="A drawing of a woman with wings" id="art-1"/>
+                    </div>
+                    <div id="art-2-container" class="single-container">
+                        <img src="./images/intto1.png" alt="A drawing of a merman" id="art-2"/>
+                    </div>
+                    <div id="art-3-container" class="single-container">
+                        <img src="./images/miko.png" alt="A simplistic poster of a Shiba Inu" id="art-3"/>
+                    </div>
+                </div>
+
+                <div class="right-arrow-container" id="arrow-right-art">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
         </div>
         <div class="art-see-more see-more">
             <a href="./art.html" target="blank">See more</a>

@@ -319,7 +319,7 @@ nav a:active {
     margin: 0;
     font-family: 'Raleway', sans-serif;
     font-size: 1.3rem;
-    color: #888dbe;
+    color: #afb4df;
 }
 
 #photo {
@@ -398,9 +398,87 @@ nav a:active {
 }
 
 .carousel {
-    background-color: aliceblue;
+    background-color: #211031;
     width: 90%;
     height: 90%;
+    display: grid;
+    grid-template: repeat(9, 1fr) / repeat(9, 1fr);
+    overflow: hidden;
+}
+
+.right-arrow-container,
+.left-arrow-container {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-size: 2.25rem;
+    z-index: 10;
+    margin: 10px;
+}
+
+.right-arrow-container:hover,
+.left-arrow-container:hover {
+    cursor: pointer;
+}
+
+.left-arrow-container {
+    grid-area: 1 / 1 / 10 / 2;
+    justify-content: start;
+}
+
+.right-arrow-container {
+    grid-area: 1 / 9 / 10 / 10;
+    justify-content: end;
+}
+
+.images-container {
+    grid-area: 1 / 1 / 10 / 10;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    height: 100%;
+    width: 100%;
+}
+
+.images-container img {
+    height: 100%;
+    position: relative;
+}
+
+.shade {
+    grid-area: 1 / 1 / 10 / 10;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 5;
+    background-color: #000000c9;
+    
+}
+
+.single-container {
+    grid-area: 1 / 1 / 4 / 4;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-out 0.1s;
+}
+
+#art-1-container {
+    z-index: 4;
+    justify-content: start;
+    filter: blur(8px);
+}
+
+#art-2-container {
+    z-index: 6;
+    justify-content: center;
+    filter: none;
+}
+
+#art-3-container {
+    z-index: 4;
+    justify-content: end;
+    filter: blur(8px);
 }
 
 .see-more {
