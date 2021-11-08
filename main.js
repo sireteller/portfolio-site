@@ -27,6 +27,8 @@ let art2 = document.getElementById('art-2-container');
 let art3 = document.getElementById('art-3-container');
 let artArray = [art1, art2, art3];
 
+
+
 document.getElementById('arrow-right-art').onclick = function(){
     if (artArray[1] === art2) {
         art1.style.justifyContent = 'end';

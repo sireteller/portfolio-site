@@ -53,7 +53,7 @@ section {
 
 .banner-bg {
     background-color: #1104278c;
-    background: linear-gradient(#1104278c, #1104278c), url('./images/lilac.jpg');
+    background: linear-gradient(#110427bb, #110427bb), url('./images/lilac-oilified.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom 95px;
@@ -63,7 +63,7 @@ section {
 
 .banner {
     margin: 0;
-    background-image: url('./images/lilac-cropped.png');
+    background-image: url('./images/lilac-cropped-oilified.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -85,8 +85,9 @@ h1 {
     background-color: #0e061e;
     text-shadow: 5px 5px #452261;
     font-size: 7rem;
-    font-family: 'Cinzel', 'Lucida Bright', 'Times New Roman', serif;
+    font-family: 'Philosopher', 'Times New Roman', serif;
     font-weight: 700;
+    text-transform: uppercase;
     z-index: 1000;
     margin: 0;
 }
