@@ -27,98 +27,44 @@ let art2 = document.getElementById('art-2-container');
 let art3 = document.getElementById('art-3-container');
 let artArray = [art1, art2, art3];
 
-
-
 document.getElementById('arrow-right-art').onclick = function(){
-    if (artArray[1] === art2) {
-        art1.style.justifyContent = 'end';
-        art1.style.zIndex = '4';
-        art1.style.filter = 'blur(8px)';
+    let left = artArray[0];
+    let middle = artArray[1];
+    let right = artArray[2];
+
+    artArray[0].style.justifyContent = 'end';
+    artArray[0].style.zIndex = '4';
+    artArray[0].style.filter = 'blur(8px)';
         
-        art3.style.justifyContent = 'center';
-        art3.style.zIndex = '6';
-        art3.style.filter = 'none';
+    artArray[2].style.justifyContent = 'center';
+    artArray[2].style.zIndex = '6';
+    artArray[2].style.filter = 'none';
 
-        art2.style.justifyContent = 'start';
-        art2.style.zIndex = '4';
-        art2.style.filter = 'blur(8px)';
+    artArray[1].style.justifyContent = 'start';
+    artArray[1].style.zIndex = '4';
+    artArray[1].style.filter = 'blur(8px)';
 
-        artArray = [art2, art3, art1];
-    } else if (artArray[1] === art3) {
-        art2.style.justifyContent = 'end';
-        art2.style.zIndex = '4';
-        art2.style.filter = 'blur(8px)';
-        
-        art1.style.justifyContent = 'center';
-        art1.style.zIndex = '6';
-        art1.style.filter = 'none';
-
-        art3.style.justifyContent = 'start';
-        art3.style.zIndex = '4';
-        art3.style.filter = 'blur(8px)';
-
-        artArray = [art3, art1, art2];
-    } else if (artArray[1] === art1) {
-        art3.style.justifyContent = 'end';
-        art3.style.zIndex = '4';
-        art3.style.filter = 'blur(8px)';
-        
-        art2.style.justifyContent = 'center';
-        art2.style.zIndex = '6';
-        art2.style.filter = 'none';
-
-        art1.style.justifyContent = 'start';
-        art1.style.zIndex = '4';
-        art1.style.filter = 'blur(8px)';
-
-        artArray = [art1, art2, art3];
-    }
+    artArray = [middle, right, left];
 }
 
 document.getElementById('arrow-left-art').onclick = function(){
-    if (artArray[1] === art2) {
-        art2.style.justifyContent = 'end';
-        art2.style.zIndex = '4';
-        art2.style.filter = 'blur(8px)';
+    let left = artArray[0];
+    let middle = artArray[1];
+    let right = artArray[2];
+
+    artArray[1].style.justifyContent = 'end';
+    artArray[1].style.zIndex = '4';
+    artArray[1].style.filter = 'blur(8px)';
         
-        art1.style.justifyContent = 'center';
-        art1.style.zIndex = '6';
-        art1.style.filter = 'none';
+    artArray[0].style.justifyContent = 'center';
+    artArray[0].style.zIndex = '6';
+    artArray[0].style.filter = 'none';
 
-        art3.style.justifyContent = 'start';
-        art3.style.zIndex = '4';
-        art3.style.filter = 'blur(8px)';
+    artArray[2].style.justifyContent = 'start';
+    artArray[2].style.zIndex = '4';
+    artArray[2].style.filter = 'blur(8px)';
 
-        artArray = [art3, art1, art2]
-    } else if (artArray[1] === art1) {
-        art1.style.justifyContent = 'end';
-        art1.style.zIndex = '4';
-        art1.style.filter = 'blur(8px)';
-        
-        art3.style.justifyContent = 'center';
-        art3.style.zIndex = '6';
-        art3.style.filter = 'none';
-
-        art2.style.justifyContent = 'start';
-        art2.style.zIndex = '4';
-        art2.style.filter = 'blur(8px)';
-
-        artArray = [art2, art3, art1]
-    } else if (artArray[1] === art3) {
-        art3.style.justifyContent = 'end';
-        art3.style.zIndex = '4';
-        art3.style.filter = 'blur(8px)';
-        
-        art2.style.justifyContent = 'center';
-        art2.style.zIndex = '6';
-        art2.style.filter = 'none';
-
-        art1.style.justifyContent = 'start';
-        art1.style.zIndex = '4';
-        art1.style.filter = 'blur(8px)';
-
-        artArray = [art1, art2, art3]
-    }
+    artArray = [right, left, middle];
 }
 
 // BEST WORKS ZOOM
