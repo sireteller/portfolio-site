@@ -118,3 +118,28 @@ document.getElementById('arrow-left-art').onclick = function(){
         artArray = [art1, art2, art3]
     }
 }
+
+// BEST WORKS ZOOM
+
+let zoomBox = document.getElementById('zoom-box');
+let zoomedImg = document.getElementById('zoomed-img');
+let x = document.getElementById('close');
+let artImg1 = document.getElementById('art-1');
+let artImg2 = document.getElementById('art-2');
+let artImg3 = document.getElementById('art-3');
+let artImgArray = [artImg1, artImg2, artImg3];
+
+let zoomImage = (event) => {
+    zoomBox.style.display = 'flex';
+    zoomedImg.src = event.target.src;
+}
+
+let closeFunc = () => {
+    zoomBox.style.display = 'none';
+}
+
+x.onclick = closeFunc;
+
+artImgArray[0].onclick = zoomImage;
+artImgArray[1].onclick = zoomImage;
+artImgArray[2].onclick = zoomImage;

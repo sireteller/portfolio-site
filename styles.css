@@ -313,6 +313,7 @@ nav a:active {
     width: 100%;
     margin: 0;
     padding: 0;
+    transition: all 0.7s cubic-bezier(.35,.72,.47,.94) 0.1s;
 }
 
 .pictures img {
@@ -404,9 +405,43 @@ h4.artwork {
     display: flex;
     justify-content: center;
     align-items: center;
-    
     width: 100%;
     height: 100%;
+}
+
+#zoom-box {
+    background-color: #000000c9;
+    position: absolute;
+    width: 100%;
+    height: 850px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+}
+
+.zoom-filler {
+    height: 90%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+#zoomed-img {
+    height: 90%;
+    width: auto;
+}
+
+#close {
+    position: relative;
+    font-size: 3rem;
+    font-family: 'Raleway', sans-serif;
+    color: #cdbbec;
+    padding: 0 10px;
+}
+
+#close:hover {
+    cursor: pointer;
 }
 
 .carousel {
@@ -454,6 +489,10 @@ h4.artwork {
 .images-container img {
     height: 100%;
     position: relative;
+}
+
+.images-container img:hover {
+    cursor: zoom-in;
 }
 
 .shade {
