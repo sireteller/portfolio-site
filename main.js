@@ -91,3 +91,17 @@ x.onclick = closeFunc;
 artImgArray[0].onclick = zoomImage;
 artImgArray[1].onclick = zoomImage;
 artImgArray[2].onclick = zoomImage;
+
+// LIGHT MODE / DARK MODE
+
+let modeSwitch = document.getElementById('mode-switch');
+
+modeSwitch.onclick = function() {
+    if (modeSwitch.innerHTML === 'Light Mode') {
+        modeSwitch.innerHTML = 'Dark Mode';
+        document.getElementById('modesheet').href = 'lightmode.css';
+    } else if (modeSwitch.innerHTML === 'Dark Mode') {
+        modeSwitch.innerHTML = 'Light Mode';
+        document.getElementById('modesheet').href = 'darkmode.css';
+    }
+}
