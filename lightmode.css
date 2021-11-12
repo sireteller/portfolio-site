@@ -14,7 +14,7 @@
 h1 {
     color: #0e061e;
     background-color: #cdbbec;
-    text-shadow: 5px 5px #845ca5;
+    text-shadow: 5px 5px #ac81cf;
 }
 
 .banner span {
@@ -24,13 +24,6 @@ h1 {
 
 .banner-buttons-container {
     background-color: #cdbbec85;
-}
-
-.banner-bg {
-    background: linear-gradient(#a496bd8c, #a496bd8c), url('./images/lilac-oilified.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom 95px;
 }
 
 /* ABOUT ME */
@@ -93,7 +86,7 @@ h1 {
 /* CONTACT ME */
 
 .contact {
-    background-color: #c07fa3;
+    background-color: #b1809b;
 }
 
 .contact h2,
@@ -131,11 +124,4 @@ textarea {
 input:focus,
 textarea:focus {
     background-color: #6d3353;
-}
-
-/* FOOTER */
-
-footer {
-    color: #0e061e;
-    background-color: #cdbbec;
 }
