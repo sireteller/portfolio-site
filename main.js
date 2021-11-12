@@ -5,11 +5,23 @@ let photo = document.getElementById('photo');
 let drawingSwitch = document.getElementById('drawing-switch');
 let photoSwitch = document.getElementById('photo-switch');
 
+if (window.matchMedia('(max-width: 768px)').matches) {
+    drawingSwitch.innerHTML = 'Photo-fy';
+    photoSwitch.innerHTML = 'Cartoonify';
+    document.getElementById('photo-img').src = './images/itmeportrait.jpg';
+    document.getElementById('drawing-img').src = './images/drawing-portrait.png';
+}
+
 drawingSwitch.onclick = function() {
     drawingSwitch.style.right = '10000px';
     photoSwitch.style.right = '0';
-    photo.style.right = '25%';
     drawing.style.left = '10000px';
+
+    if(window.matchMedia('(max-width: 1024px)').matches) {
+        photo.style.right= '50%';
+    } else {
+        photo.style.right = '25%';
+    }
 }
 
 photoSwitch.onclick = function() {
@@ -78,8 +90,11 @@ let artImg3 = document.getElementById('art-3');
 let artImgArray = [artImg1, artImg2, artImg3];
 
 let zoomImage = (event) => {
-    zoomBox.style.display = 'flex';
-    zoomedImg.src = event.target.src;
+
+    if(!window.matchMedia('(max-width: 1024px)').matches) {
+        zoomBox.style.display = 'flex';
+        zoomedImg.src = event.target.src;
+    }
 }
 
 let closeFunc = () => {
@@ -104,4 +119,15 @@ modeSwitch.onclick = function() {
         modeSwitch.innerHTML = 'Light Mode';
         document.getElementById('modesheet').href = 'darkmode.css';
     }
+}
+
+// SOME MEDIA QUERIES
+
+if (window.matchMedia('(max-width: 768px)').matches) {
+    document.getElementById('contact-info').innerHTML = `Saw something you liked? <br><br>
+
+    Fill out this handy-dandy form and I'll get back to you as soon as I can or contact me directly via<br><br>
+
+    <i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/siret-eller-46108a224/" target="blank">LinkedIn</a>  or  
+    <i class="fas fa-envelope"></i><span class="mail">sireteller@gmail.com</span>`;
 }
