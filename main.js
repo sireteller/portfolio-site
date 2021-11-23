@@ -109,15 +109,14 @@ artImgArray[2].onclick = zoomImage;
 
 // LIGHT MODE / DARK MODE
 
-let modeSwitch = document.getElementById('mode-switch');
 let modeSheet = document.getElementById('modesheet');
 
-modeSwitch.onclick = function() {
-    if (modeSheet.href === 'darkmode.css') {
-        modeSheet.href = 'lightmode.css';
-    } else if (modeSheet.href === 'lightmode.css') {
-        modeSheet.href = 'darkmode.css';
-    }
+document.getElementById('sun').onclick = function() {
+    modeSheet.href = './lightmode.css';
+}
+
+document.getElementById('moon').onclick = function() {
+    modeSheet.href = './darkmode.css'
 }
 
 // SOME MEDIA QUERIES
