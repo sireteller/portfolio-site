@@ -85,7 +85,7 @@ nav a:active {
 }
 
 .fa-moon {
-    color: #a59823;
+    color: #b8aa30;
 }
 
 .fa-sun {
@@ -210,5 +210,6 @@ textarea:focus {
 
 footer {
     color: #2c1b4d;
-    background-color: #b29cd8;
+    background-color: #b4aee6;
+    border-top: 1px solid #2c1b4d;
 }
