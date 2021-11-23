@@ -109,16 +109,14 @@ artImgArray[2].onclick = zoomImage;
 
 // LIGHT MODE / DARK MODE
 
-let modeSwitch = document.getElementById('mode-switch');
+let modeSheet = document.getElementById('modesheet');
 
-modeSwitch.onclick = function() {
-    if (modeSwitch.innerHTML === 'Light Mode') {
-        modeSwitch.innerHTML = 'Dark Mode';
-        document.getElementById('modesheet').href = 'lightmode.css';
-    } else if (modeSwitch.innerHTML === 'Dark Mode') {
-        modeSwitch.innerHTML = 'Light Mode';
-        document.getElementById('modesheet').href = 'darkmode.css';
-    }
+document.getElementById('sun').onclick = function() {
+    modeSheet.href = './lightmode.css';
+}
+
+document.getElementById('moon').onclick = function() {
+    modeSheet.href = './darkmode.css'
 }
 
 // SOME MEDIA QUERIES

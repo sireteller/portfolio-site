@@ -26,6 +26,17 @@ h1 {
     background-color: #cdbbec85;
 }
 
+/* NAV BAR */
+
+.fa-moon {
+    color: #3a6e25;
+}
+
+.fa-sun {
+    color: #b8e2ac;
+    background: radial-gradient(closest-side, #629953b0, #b8e2ac00)
+}
+
 /* ABOUT ME */
 
 .about-me {
