@@ -13,22 +13,33 @@ if (window.matchMedia('(max-width: 768px)').matches) {
 }
 
 drawingSwitch.onclick = function() {
+    photo.style.display = 'flex';
     drawingSwitch.style.right = '10000px';
     photoSwitch.style.right = '0';
     drawing.style.left = '10000px';
 
-    if(window.matchMedia('(max-width: 1024px)').matches) {
-        photo.style.right= '50%';
-    } else {
-        photo.style.right = '25%';
-    }
+    setTimeout(() => {
+    photo.style.right = '0';
+    }, 100);
+
+    setTimeout(() => {
+    drawing.style.display = 'none';
+    }, 200);
 }
 
 photoSwitch.onclick = function() {
+    drawing.style.display = 'flex';
     drawingSwitch.style.right = '0';
     photoSwitch.style.right = '10000px';
     photo.style.right = '10000px';
-    drawing.style.left = '25%';
+
+    setTimeout(() => {
+    drawing.style.left = '0';
+    }, 100);
+
+    setTimeout(() => {
+    photo.style.display = 'none';
+    }, 200);
 }
 
 //BEST WORKS CAROUSEL

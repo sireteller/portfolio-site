@@ -283,9 +283,15 @@ nav a:active {
     margin: 20px 40px 20px 0;
 }
 
-.about-me button {
+.about-me .button-container {
     grid-area: 9 / 2 / 10 / 3;
+    width: 100%;
+    height: 100%;
+}
+
+.about-me button {
     width: 50%;
+    height: 100%;
     background-color: #888dbe;
     color: #121b3a;
     border-radius: 50px 0;
@@ -320,7 +326,7 @@ nav a:active {
     grid-area: 2 / 1 / 10 / 2;
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     width: 100%;
     height: 100%;
     z-index: 2;
@@ -330,13 +336,13 @@ nav a:active {
 .pictures figure {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     height: 100%;
     width: 100%;
-    margin: 0;
+    margin: 0 5%;
     padding: 0;
-    transition: all 0.7s cubic-bezier(.35,.72,.47,.94) 0.1s;
+    transition: all 0.7s ease-in-out 0s;
 }
 
 .pictures img {
@@ -358,11 +364,13 @@ nav a:active {
 #photo {
     position: relative;
     right: 10000px;
+    display: none;
 }
 
 #drawing {
     position: relative;
-    left: 25%;
+    left: 0;
+    display: flex;
 }
 
 #photo-switch {
@@ -816,23 +824,46 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
+    
+    /* ABOUT ME */
+    .about-me {
+        grid-template: repeat(12, 1fr) / 1fr;
+        height: 1050px;
+    }
+    
     .about-me h2 {
-        grid-area: 1 / 1 / 3 / 3;
+        grid-area: 1 / 1 / 2 / 2;
         justify-content: center;
     }
 
-    .about-me .pictures {
-        grid-area: 3 / 1 / 6 / 2;
-    }
-
+    .filler,
+    .about-me .background-pattern,
     .pictures figcaption {
         display: none;
     }
 
-    .about-me button {
-        grid-area: 6 / 1 / 7 / 2;
+    .about-me .pictures {
+        grid-area: 2 / 1 / 5 / 2;
     }
 
+    .pictures img {
+        border-radius: 100px;
+        padding: 10px;
+    }
+
+    .about-me .button-container {
+        grid-area: 5 / 1 / 6 / 2;
+        display: flex;
+        justify-content: center;
+    }
+
+    .blurb {
+        grid-area: 6 / 1 / 12 / 2;
+        padding: 5% 10%;
+        margin: 0;
+    }
+
+    /* CONTACT ME */
     .info {
         grid-area: 3 / 1 / 5 / 3;
     }
