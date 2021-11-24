@@ -873,7 +873,7 @@ footer {
     }
 
     form {
-        grid-area: 6 / 1 / 11 / 3;
+        grid-area: 5 / 1 / 11 / 3;
         margin: 0 auto;
     }
 }
@@ -961,5 +961,37 @@ footer {
     .info {
         grid-area: 2 / 1 / 5 / 3;
         margin: 20px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    .blurb {
+        font-size: 1.25rem;
+    }
+
+    .best-works h4 {
+        font-size: 2.5rem;
+    }
+
+    .info,
+    form,
+    input,
+    textarea,
+    .submit {
+        font-size: 1.30rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .blurb {
+        font-size: 1.2rem;
     }
 }
