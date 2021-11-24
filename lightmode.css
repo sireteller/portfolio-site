@@ -54,6 +54,27 @@ h1 {
 
 /* NAV BAR */
 
+.small-nav,
+.small-nav a,
+#small-nav-arrow {
+    color: #807410;
+}
+
+#small-nav-links {
+    background-color: #e2d453;
+    border-right: 1px solid #fcf6c0;
+    border-bottom: 1px solid #fcf6c0;
+}
+
+.small-nav span {
+    background-color: #8a7d10;
+    color: #f5eb8f;
+}
+
+#small-nav-arrow {
+    background-color: #e2d453;
+}
+
 nav {
     background-color: #e2d453;
     background: linear-gradient(#e2d453, #f1e789);

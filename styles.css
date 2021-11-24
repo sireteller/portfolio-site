@@ -156,6 +156,10 @@ h1 {
 }
 
 /* ****NAV BAR STYLES**** */
+.small-nav {
+    display: none;
+}
+
 nav {
     position: fixed;
     top: 0;
@@ -847,7 +851,7 @@ footer {
     }
 
     .pictures img {
-        border-radius: 100px;
+        border-radius: 300px;
         padding: 10px;
     }
 
@@ -870,6 +874,92 @@ footer {
 
     form {
         grid-area: 6 / 1 / 11 / 3;
-        margin-left: 20px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .banner-buttons,
+    .banner span,
+    nav span {
+        display: none;
+    }
+
+    .banner,
+    .banner-bg {
+        height: 720px;
+    }
+
+    .small-nav {
+        display: grid;
+        grid-template: repeat(7, 1fr) / repeat(6, 1fr);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1001;
+        height: 500px;
+        font-family: 'Philosopher', 'Lucida Bright', 'Times New Roman', serif;
+        font-size: 1.25rem;
+        color: #b8e2ac;
+        transition: all 0.7s ease-in-out 0.1s;
+    }
+
+    #small-nav-links {
+        position: relative;
+        right: 100%;
+        grid-area: 1 / 1 / 8 / 6;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        background-color: #1d5706;
+        border-right: 1px solid #b8e2ac;
+        border-bottom: 1px solid #b8e2ac;
+        line-height: 1.75rem;
+    }
+
+    #small-nav-links i {
+        width: 30px;
+    }
+
+    .small-nav span {
+        background-color: #143a05;
+        padding: 20px;
+    }
+
+    .small-nav a {
+        color: #b8e2ac;
+        font-weight: 600;
+        padding: 20px;
+    }
+
+    #small-nav-arrow {
+        position: relative;
+        right: 500%;
+        grid-area: 1 / 6 / 2 / 7;
+        background-color: #1d5706;
+        font-size: 2rem;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .small-nav i:hover {
+        cursor: pointer;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    .contact h2 {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+
+    .info {
+        grid-area: 2 / 1 / 5 / 3;
+        margin: 20px;
     }
 }

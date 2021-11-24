@@ -1,3 +1,23 @@
+//SMALL NAV TRIGGER
+
+if (window.matchMedia('(max-width: 540px)').matches) {
+    let smallNavArrow = document.getElementById('small-nav-arrow');
+    let smallNav = document.getElementById('small-nav-links');
+    smallNav.style.right = '100%';
+
+    smallNavArrow.onclick = function() {
+        if (smallNav.style.right === '100%') {
+            smallNavArrow.style.right = '0%';
+            smallNav.style.right = '0%';
+            smallNavArrow.style.transform = 'rotate(180deg)';
+        } else {
+            smallNavArrow.style.right = '500%';
+            smallNav.style.right = '100%';
+            smallNavArrow.style.transform = 'rotate(0deg)';
+        }
+    }
+}
+
 //ABOUT ME PICTURE SWITCH
 
 let drawing = document.getElementById('drawing');
