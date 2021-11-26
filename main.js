@@ -1,20 +1,18 @@
 //SMALL NAV TRIGGER
 
-if (window.matchMedia('(max-width: 540px)').matches) {
-    let smallNavArrow = document.getElementById('small-nav-arrow');
-    let smallNav = document.getElementById('small-nav-links');
-    smallNav.style.right = '100%';
+let smallNavArrow = document.getElementById('small-nav-arrow');
+let smallNav = document.getElementById('small-nav-links');
+smallNav.style.right = '100%';
 
-    smallNavArrow.onclick = function() {
-        if (smallNav.style.right === '100%') {
-            smallNavArrow.style.right = '0%';
-            smallNav.style.right = '0%';
-            smallNavArrow.style.transform = 'rotate(180deg)';
-        } else {
-            smallNavArrow.style.right = '500%';
-            smallNav.style.right = '100%';
-            smallNavArrow.style.transform = 'rotate(0deg)';
-        }
+smallNavArrow.onclick = function() {
+    if (smallNav.style.right === '100%') {
+        smallNavArrow.style.right = '0%';
+        smallNav.style.right = '0%';
+        smallNavArrow.style.transform = 'rotate(180deg)';
+    } else {
+        smallNavArrow.style.right = '500%';
+        smallNav.style.right = '100%';
+        smallNavArrow.style.transform = 'rotate(0deg)';
     }
 }
 
@@ -24,13 +22,6 @@ let drawing = document.getElementById('drawing');
 let photo = document.getElementById('photo');
 let drawingSwitch = document.getElementById('drawing-switch');
 let photoSwitch = document.getElementById('photo-switch');
-
-if (window.matchMedia('(max-width: 768px)').matches) {
-    drawingSwitch.innerHTML = 'Photo-fy';
-    photoSwitch.innerHTML = 'Cartoonify';
-    document.getElementById('photo-img').src = './images/itmeportrait.jpg';
-    document.getElementById('drawing-img').src = './images/drawing-portrait.png';
-}
 
 drawingSwitch.onclick = function() {
     photo.style.display = 'flex';
@@ -61,6 +52,42 @@ photoSwitch.onclick = function() {
     photo.style.display = 'none';
     }, 200);
 }
+
+let smallDrawing = document.getElementById('drawing-small');
+let smallPhoto = document.getElementById('photo-small');
+let smallDrawingSwitch = document.getElementById('drawing-switch-small');
+let smallPhotoSwitch = document.getElementById('photo-switch-small');
+
+smallDrawingSwitch.onclick = function() {
+    smallPhoto.style.display = 'flex';
+    smallDrawingSwitch.style.right = '10000px';
+    smallPhotoSwitch.style.right = '0';
+    smallDrawing.style.left = '10000px';
+
+    setTimeout(() => {
+    smallPhoto.style.right = '0';
+    }, 100);
+
+    setTimeout(() => {
+    smallDrawing.style.display = 'none';
+    }, 200);
+}
+
+smallPhotoSwitch.onclick = function() {
+    smallDrawing.style.display = 'flex';
+    smallDrawingSwitch.style.right = '0';
+    smallPhotoSwitch.style.right = '10000px';
+    smallPhoto.style.right = '10000px';
+
+    setTimeout(() => {
+    smallDrawing.style.left = '0';
+    }, 100);
+
+    setTimeout(() => {
+    smallPhoto.style.display = 'none';
+    }, 200);
+}
+
 
 //BEST WORKS CAROUSEL
 //ARTWORKS
@@ -148,15 +175,4 @@ document.getElementById('sun').onclick = function() {
 
 document.getElementById('moon').onclick = function() {
     modeSheet.href = './darkmode.css'
-}
-
-// SOME MEDIA QUERIES
-
-if (window.matchMedia('(max-width: 768px)').matches) {
-    document.getElementById('contact-info').innerHTML = `Saw something you liked? <br><br>
-
-    Fill out this handy-dandy form and I'll get back to you as soon as I can or contact me directly via<br><br>
-
-    <i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/siret-eller-46108a224/" target="blank">LinkedIn</a>  or  
-    <i class="fas fa-envelope"></i><span class="mail">sireteller@gmail.com</span>`;
 }

@@ -188,7 +188,6 @@ nav ul {
     color:#b8e2ac;
     font-family: 'Philosopher', 'Lucida Bright', 'Times New Roman', serif;
     font-size: 1.5rem;
-    font-style: italic;
     font-weight: 600;
     list-style: none;
     justify-content: space-around;
@@ -307,7 +306,7 @@ nav a:active {
     font-size: 1.5rem;
     font-weight: 700;
     box-shadow: 0px 5px #091027, 10px 0px #091027, 10px 5px #091027;
-    transition: background-color 150ms ease-in-out 0.1s, color 150ms ease-in-out 0.1s;
+    transition: background-color 150ms ease-in-out 0.1s, color 150ms ease-in-out 0.1s, right 0s linear 0.2s;
 }
 
 .about-me button:hover {
@@ -385,6 +384,13 @@ nav a:active {
 #drawing-switch {
     position: relative;
     right: 0;
+}
+
+#photo-small,
+#drawing-small,
+#photo-switch-small,
+#drawing-switch-small {
+    display: none;
 }
 
 /* ****BEST WORKS SECTION STYLES**** */
@@ -664,6 +670,10 @@ h4.artwork {
     color: #c7a0b5;
 }
 
+.contact-info-small {
+    display: none;
+}
+
 form {
     grid-area: 4 / 2 / 10 / 3;
     display: grid;
@@ -784,6 +794,10 @@ footer {
         width: 100%;
     }
 
+    .about-me {
+        height: 1000px;
+    }
+
     .best-works {
         height: 1700px;
         grid-template: repeat(23, 1fr) / repeat(2, 1fr);
@@ -842,7 +856,10 @@ footer {
 
     .filler,
     .about-me .background-pattern,
-    .pictures figcaption {
+    #drawing,
+    #photo,
+    #drawing-switch,
+    #photo-switch {
         display: none;
     }
 
@@ -861,6 +878,30 @@ footer {
         justify-content: center;
     }
 
+    #photo-small {
+        position: relative;
+        right: 10000px;
+        display: none;
+    }
+    
+    #drawing-small {
+        position: relative;
+        left: 0;
+        display: flex;
+    }
+    
+    #photo-switch-small {
+        display: block;
+        position: relative;
+        right: 10000px;
+    }
+    
+    #drawing-switch-small {
+        display: block;
+        position: relative;
+        right: 0;
+    }
+
     .blurb {
         grid-area: 6 / 1 / 12 / 2;
         padding: 5% 10%;
@@ -868,8 +909,21 @@ footer {
     }
 
     /* CONTACT ME */
+    .contact {
+        height: 1000px;
+    }
+    
     .info {
         grid-area: 3 / 1 / 5 / 3;
+        margin: 40px;
+    }
+
+    .contact-info-small {
+        display: inline;
+    }
+
+    .contact-info-large {
+        display: none;
     }
 
     form {
@@ -878,7 +932,7 @@ footer {
     }
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 615px) {
     .banner-buttons,
     .banner span,
     nav span {
@@ -950,8 +1004,16 @@ footer {
         font-size: 5rem;
     }
 
+    .about-me {
+        height: 1100px;
+    }
+
     h2 {
         font-size: 4rem;
+    }
+
+    .contact {
+        height: 850px;
     }
 
     .contact h2 {
@@ -971,6 +1033,10 @@ footer {
 
     h2 {
         font-size: 3rem;
+    }
+
+    .about-me {
+        height: 1200px;
     }
 
     .blurb {
