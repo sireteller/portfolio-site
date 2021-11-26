@@ -176,3 +176,12 @@ document.getElementById('sun').onclick = function() {
 document.getElementById('moon').onclick = function() {
     modeSheet.href = './darkmode.css'
 }
+
+// FORM SUBMIT
+
+document.querySelector('form.form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    let x = document.querySelector('form.form').elements;
+    console.log("Email: ", x['email'].value);
+    console.log("Message: ", x['message'].value);
+  });
