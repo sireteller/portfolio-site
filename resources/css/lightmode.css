@@ -1,0 +1,240 @@
+/* GLOBAL */
+
+* {
+    transition: all 0.8s ease-in 0.1s;
+}
+
+.background-pattern {
+    opacity: 0.5;
+}
+
+
+/* BANNER */
+
+h1 {
+    color: #2c1b4d;
+    background-color: #cdbbec;
+    text-shadow: 5px 5px #ac81cf;
+}
+
+.banner-bg {
+    background: linear-gradient(#cdbbec54, #cdbbec54), url('./images/lilac-oilified.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom 95px;
+    width: 100%;
+    height: 1045px;
+}
+
+.banner span {
+    color: #0e061e;
+    background-color: #cdbbecc4;
+}
+
+.banner-buttons-container {
+    background-color: #cdbbec85;
+}
+
+.button-banner {
+    background-color: #e2d453;
+    color: #807410;
+    border-top: 2px solid #fff387;
+    box-shadow: 0px 5px #7c710a, 10px 0px #7c710a, 10px 5px #7c710a;
+}
+
+.button-banner:hover {
+    background-color: #e7dc7b;
+    color: #968a20;
+}
+
+.button-banner:active {
+    background-color: #8a7d10;
+    color: #524b11;
+}
+
+/* NAV BAR */
+
+.small-nav,
+.small-nav a,
+#small-nav-arrow {
+    color: #807410;
+}
+
+#small-nav-links {
+    background-color: #e2d453;
+    border-right: 1px solid #fcf6c0;
+    border-bottom: 1px solid #fcf6c0;
+}
+
+.small-nav span {
+    background-color: #8a7d10;
+    color: #f5eb8f;
+}
+
+#small-nav-arrow {
+    background-color: #e2d453;
+}
+
+nav {
+    background-color: #e2d453;
+    background: linear-gradient(#e2d453, #f1e789);
+    border-bottom: 1px solid #fcf6c0;
+}
+
+nav a {
+    color: #807410;
+}
+
+nav li {
+    border-right: 2px solid #7c710a;
+}
+
+nav li:hover,
+nav a:hover {
+    background-color: #ebe18b;
+    color: #968a20;
+}
+
+nav li:active,
+nav a:active {
+    background-color: #8a7d10;
+    color: #524b11;
+}
+
+.light-switch {
+    background-color: #8a7d10;
+}
+
+.fa-moon {
+    color: #b8aa30;
+}
+
+.fa-sun {
+    color: #f5eb8f;
+    background: radial-gradient(closest-side, #d3c545d5, #e2d45300)
+}
+
+/* ABOUT ME */
+
+.about-me {
+    background-color: #becbf1;
+}
+
+.blurb,
+.pictures figcaption {
+    color: #111a35;
+}
+
+.about-me h2,
+.filler,
+.about-me button {
+    background-color: #99aae2;
+    color: #121d3f;
+}
+
+.about-me button {
+    border-top: solid 4px #edf2ff;
+}
+
+.about-me button:hover {
+    background-color: #a9b7e6;
+    color: #203163;
+}
+
+.about-me button:active {
+    background-color: #394a85;
+    color: #060f29;
+}
+
+/* BEST WORKS */
+
+.heading,
+.see-more a {
+    background-color: #ac8ed3;
+    color: #211031;
+}
+
+.see-more a{
+    border-top: 2px solid #eadcf7;
+}
+
+.see-more a:hover {
+    background-color: #c3aedf;
+    color: #40235c;
+}
+
+.see-more a:active {
+    background-color: #583679;
+    color: #200f30;
+}
+
+.best-works {
+    background-color: #cfb8e4;
+}
+
+.best-works h4 {
+    color: #341b4b;
+}
+
+.carousel {
+    background-color: #ac8ed3;
+}
+
+.coming-soon {
+    color: #341b4b;
+}
+
+/* CONTACT ME */
+
+.contact {
+    background-color: #eebbd7;
+}
+
+.contact h2,
+.submit {
+    color: #33071f;
+    background-color: #d689b2;
+}
+
+.submit {
+    border-top: 2px solid #f7d6e7;
+}
+
+.submit:hover {
+    background-color: #e2a4c4;
+    color: #4e1434;
+}
+
+.submit:active {
+    background-color: #6d3353;
+    color: #270417;
+}
+
+.info {
+    color: #6b3450;
+}
+
+.info a,
+.info .mail,
+.info i,
+form {
+    color: #6e2049;
+}
+
+input,
+textarea {
+    background-color: #a06485;
+}
+
+input:focus,
+textarea:focus {
+    background-color: #c589aa;
+}
+
+/* FOOTER */
+
+footer {
+    color: #2c1b4d;
+    background-color: #b4aee6;
+    border-top: 1px solid #2c1b4d;
+}
