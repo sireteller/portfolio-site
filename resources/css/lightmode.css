@@ -8,6 +8,10 @@
     opacity: 0.5;
 }
 
+body {
+    background-color: #cdbbec;
+}
+
 
 /* BANNER */
 
@@ -18,7 +22,7 @@ h1 {
 }
 
 .banner-bg {
-    background: linear-gradient(#cdbbec54, #cdbbec54), url('./images/lilac-oilified.jpg');
+    background: linear-gradient(#cdbbec54, #cdbbec54), url('../images/lilac-oilified.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom 95px;
@@ -217,9 +221,7 @@ nav a:active {
 .info a,
 .info .mail,
 .info i,
-form,
-input,
-textarea {
+form {
     color: #6e2049;
 }
 
@@ -227,12 +229,16 @@ input,
 textarea {
     background-color: #a06485;
     color: #6e2049;
+    border-top: 2px solid #1d0512;
+    border-left: 1px solid #1d0512;
+    border-right: 1px solid #ffeff8;
+    border-bottom: 2px solid #ffeff8;
 }
 
 input:focus,
 textarea:focus {
     background-color: #c589aa;
-    border: 2px solid #6e2049;
+    border: 2px solid #ffeff8;
     outline: none;
 }
 
@@ -242,4 +248,9 @@ footer {
     color: #2c1b4d;
     background-color: #b4aee6;
     border-top: 1px solid #2c1b4d;
+}
+
+/* ***PROJECTS*** */
+.box {
+    background-color: #9a93d6 !important;
 }
