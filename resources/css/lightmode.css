@@ -217,18 +217,23 @@ nav a:active {
 .info a,
 .info .mail,
 .info i,
-form {
+form,
+input,
+textarea {
     color: #6e2049;
 }
 
 input,
 textarea {
     background-color: #a06485;
+    color: #6e2049;
 }
 
 input:focus,
 textarea:focus {
     background-color: #c589aa;
+    border: 2px solid #6e2049;
+    outline: none;
 }
 
 /* FOOTER */
