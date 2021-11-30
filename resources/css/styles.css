@@ -1050,6 +1050,11 @@ footer {
         font-size: 1.5rem;
     }
 
+    #sun,
+    #moon {
+        font-size: 1.5rem;
+    }
+
     .about-me {
         height: 1200px;
     }
@@ -1074,10 +1079,5 @@ footer {
 @media only screen and (max-width: 320px) {
     .blurb {
         font-size: 1.2rem;
-    }
-
-    #sun,
-    #moon {
-        font-size: 1.5rem;
     }
 }

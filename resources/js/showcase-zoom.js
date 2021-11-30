@@ -14,11 +14,8 @@ let artImg10 = document.getElementById('item-10');
 let artImgArray = [artImg1, artImg2, artImg3, artImg4, artImg5, artImg6, artImg7, artImg8, artImg9, artImg10];
 
 let zoomImage = (event) => {
-
-    if(!window.matchMedia('(max-width: 1024px)').matches) {
-        zoomBox.style.display = 'grid';
-        zoomedImg.src = event.target.src;
-    }
+    zoomBox.style.display = 'grid';
+    zoomedImg.src = event.target.src;
 }
 
 let closeFunc = () => {
