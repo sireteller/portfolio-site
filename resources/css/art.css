@@ -8,6 +8,46 @@ main {
     top: 120px;
 }
 
+#showcase-zoom {
+    display: none;
+    grid-template: repeat(6, 1fr) / repeat(6, 1fr);
+    background-color: #0e061ebb;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 101;
+}
+
+#showcase-zoom-close {
+    grid-area: 1 / 6 / 2 / 7;
+    color: #cdbbec;
+    text-align: right;
+    font-size: 2.5rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    margin: 50px;
+    z-index: 103;
+}
+
+#showcase-zoom-close:hover {
+    cursor: pointer;
+}
+
+.showcase-zoom-img {
+    grid-area: 1 / 1 / 7 / 7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 102;
+}
+
+#showcase-zoom-img {
+    object-fit: contain;
+    max-height: 100%;
+    max-width: 100%;
+}
+
 .showcase-container {
     display: flex;
     justify-content: center;
