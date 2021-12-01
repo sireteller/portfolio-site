@@ -88,6 +88,18 @@ smallPhotoSwitch.onclick = function() {
     }, 200);
 }
 
+window.onresize = function() {
+    smallDrawing.removeAttribute('style');
+    smallDrawingSwitch.removeAttribute('style');
+    smallPhoto.removeAttribute('style');
+    smallPhotoSwitch.removeAttribute('style');
+
+    drawing.removeAttribute('style');
+    photo.removeAttribute('style');
+    drawingSwitch.removeAttribute('style');
+    photoSwitch.removeAttribute('style');
+}
+
 
 //BEST WORKS CAROUSEL
 //ARTWORKS

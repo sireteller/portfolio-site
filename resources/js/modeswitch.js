@@ -2,10 +2,14 @@
 
 let modeSheet = document.getElementById('modesheet');
 
-document.getElementById('sun').onclick = function() {
+const setToLight = () => {
     modeSheet.href = './resources/css/lightmode.css';
 }
 
-document.getElementById('moon').onclick = function() {
-    modeSheet.href = './resources/css/darkmode.css'
+const setToDark = () => {
+    modeSheet.href = './resources/css/darkmode.css';
 }
+
+document.getElementById('sun').onclick = setToLight;
+
+document.getElementById('moon').onclick = setToDark;
