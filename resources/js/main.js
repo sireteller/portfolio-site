@@ -173,9 +173,9 @@ let closeFunc = () => {
 
 x.onclick = closeFunc;
 
-artImgArray[0].onclick = zoomImage;
-artImgArray[1].onclick = zoomImage;
-artImgArray[2].onclick = zoomImage;
+for (i = 0; i < artImgArray.length; i++) {
+    artImgArray[i].onclick = zoomImage;
+}
 
 // FORM RESUBMISSION BLOCKER
 
