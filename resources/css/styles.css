@@ -256,6 +256,7 @@ nav a:active {
     display: grid;
     grid-template: repeat(10, 1fr) / repeat(2, 1fr);
     background-color: #1e294b;
+    height: 1000px;
 }
 
 .about-me .background-pattern {
@@ -805,8 +806,9 @@ footer {
         width: 100%;
     }
 
-    .about-me {
-        height: 1000px;
+    .blurb {
+        font-size: 1.2rem;
+        margin-left: 20px;
     }
 
     .best-works {
@@ -1056,11 +1058,11 @@ footer {
     }
 
     .about-me {
-        height: 1200px;
+        height: 1300px;
     }
 
     .blurb {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
     }
 
     .best-works h4 {
@@ -1078,6 +1080,6 @@ footer {
 
 @media only screen and (max-width: 320px) {
     .blurb {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
     }
 }

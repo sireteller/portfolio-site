@@ -95,10 +95,13 @@
 
                 I'm Siret, an aspiring front end developer/artist based in Tartu, Estonia. <br><br>
 
-                Creating digital art is my main hobby and right now I'm independetly learning front end development online. 
+                Currently I'm independetly learning front end development online. 
                 The creative aspect was the main reason why I was drawn to it at first, but now I'm also really enjoying learning about how the web works. <br><br>
 
-                While I know that there are many fantastic frameworks out there,
+                While I consider digital art creation to just be a hobby right now, 
+                I <em>am</em> open to discussing any commissions You might like to make after browsing some examples.<br><br>
+
+                While I know that there are many fantastic frameworks and libraries out there,
                 I decided to challenge myself by only using vanilla HTML, CSS and JS to build this page.
                 I really hope that you like what you see.
             </p>
