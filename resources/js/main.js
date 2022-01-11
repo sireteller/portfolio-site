@@ -1,16 +1,19 @@
 //SMALL NAV TRIGGER
 
-let smallNavArrow = document.getElementById('small-nav-arrow');
-let smallNav = document.getElementById('small-nav-links');
+const smallNavArrow = document.getElementById('small-nav-arrow');
+const smallNavArrowBox = document.getElementById('small-nav-arrow-box');
+const smallNav = document.getElementById('small-nav-links');
 smallNav.style.right = '100%';
 
-smallNavArrow.onclick = function() {
+smallNavArrowBox.onclick = function() {
     if (smallNav.style.right === '100%') {
         smallNavArrow.style.right = '0%';
+        smallNavArrowBox.style.right = '0%';
         smallNav.style.right = '0%';
         smallNavArrow.style.transform = 'rotate(180deg)';
     } else {
         smallNavArrow.style.right = '500%';
+        smallNavArrowBox.style.right = '500%';
         smallNav.style.right = '100%';
         smallNavArrow.style.transform = 'rotate(0deg)';
     }

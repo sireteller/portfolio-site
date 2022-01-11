@@ -14,7 +14,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400&display=swap" rel="stylesheet">
     </head>
 
@@ -22,48 +22,44 @@
         <header>
             <div class="banner-bg">
                 <div class="banner">
-                    <div class="banner-buttons-container">
-                        <div class="banner-buttons top">
-                            <a class="button-banner" href="./projects.html" target="_blank">Web Projects</a><a class="button-banner" href="./art.html" target="_blank">Art Showcase</a>
-                        </div>
-                    </div>
-                    <span><i class="fas fa-arrow-up"></i>Navigate to other tabs<i class="fas fa-arrow-up"></i></span>
+
+                    <img src="./resources/images/leaf1.png" alt="" id="banner-leaf-1">
+                    <img src="./resources/images/leaf2.png" alt="" id="banner-leaf-2">
+                    <img src="./resources/images/leaf3.png" alt="" id="banner-leaf-3">
+                    <img src="./resources/images/leaf4.png" alt="" id="banner-leaf-4">
+                    <img src="./resources/images/leaf5.png" alt="" id="banner-leaf-5">
+
+                    <div class="banner-blurry-strip"></div>
 
                     <h1>Siret Eller</h1>
+                    <span class="personal-title">Aspiring Front-end Developer and Artist</span>
 
-                    <span><i class="fas fa-arrow-down"></i>Scroll down to content on this page<i class="fas fa-arrow-down"></i></span>
-                    <div class="banner-buttons-container">
-                        <div class="banner-buttons bottom">
-                            <a class="button-banner" href="#about-me">About Me</a><a class="button-banner" href="#best-works">Best Works</a><a class="button-banner" href="#contact">Contact Me</a>
-                        </div>
-                    </div>
                 </div>
             </div>
 
             <div class="small-nav">
-                <i class="fas fa-chevron-right" id="small-nav-arrow"></i>
+                <div id="small-nav-arrow-box">
+                    <i class="fas fa-chevron-right" id="small-nav-arrow"></i>
+                </div>
 
                 <div id="small-nav-links">
-                    <span>Navigate to other tabs</span>
-                    <a href="./projects.html" target="_blank"><i class="fas fa-file"></i>Web Projects</a>
-                    <a href="./art.html" target="_blank"><i class="fas fa-palette"></i>Art Showcase</a>
+                    <span class="small-nav-title">Navigate to other tabs</span>
+                    <a href="./projects.html"><i class="fas fa-file"></i>Web Projects</a>
+                    <a href="./art.html"><i class="fas fa-palette"></i>Art Showcase</a>
+                    <div class="small-nav-game-div">
+                        <a href="./game.html"><i class="fas fa-gamepad"></i>Game</a> <span class="game-asterisk">*Large screens only</span>
+                    </div>
 
-                    <span>Scroll down to content on this page</span>
+                    <span class="small-nav-title">Scroll down to content on this page</span>
                     <a href="#about-me">About Me</a>
                     <a href="#best-works">Best Works</a>
                     <a href="#contact">Contact Me</a>
                 </div>
             </div>
 
-            <nav>
-                <ul>
-                    <li><a href="#"><i class="fas fa-home"></i><span>Home</span></a></li>
-                    <li><a href="./projects.html"><i class="fas fa-file"></i><span>Web Projects</span></a></li>
-                    <li><a href="./art.html"><i class="fas fa-palette"></i><span>Art Showcase</span></a></li>
-                    <li><a href="./game.html"><span>Game</span></a></li>
-                    <li><div class="light-switch"><i id="sun" class="fas fa-sun"></i><i id="moon" class="fas fa-moon"></i></div></li>
-                </ul>
-            </nav>
+            <div class="light-switch-container">
+                <div class="light-switch"><i id="sun" class="fas fa-sun"></i><i id="moon" class="fas fa-moon"></i></div>    
+            </div>
         </header>
 
         <div class="anchor" id="about-me"></div>
