@@ -6,6 +6,10 @@ const smallNav = document.getElementById('small-nav-links');
 smallNav.style.right = '100%';
 
 smallNavArrowBox.onclick = function() {
+
+    smallNavArrow.style.animation = 'none';
+    smallNavArrow.style.position = 'static';
+
     if (smallNav.style.right === '100%') {
         smallNavArrow.style.right = '0%';
         smallNavArrowBox.style.right = '0%';
