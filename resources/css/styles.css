@@ -2,7 +2,8 @@
 
 html {
     margin: 0;
-    padding: 0; 
+    padding: 0;
+    font-size: 16;
     scroll-behavior: smooth;
 }
 
@@ -114,6 +115,14 @@ h1 {
 .banner img {
     position: absolute;
     z-index: 1001;
+}
+
+#banner-leaf-1:hover,
+#banner-leaf-2:hover,
+#banner-leaf-3:hover,
+#banner-leaf-4:hover,
+#banner-leaf-5:hover {
+    animation-duration: 2s;
 }
 
 #banner-leaf-1 {
@@ -312,6 +321,10 @@ h1 {
     }
 }
 
+@keyframes active-sway {
+
+}
+
 /* ****NAV DRAWER AND LIGHTSWITCH STYLES**** */
 
 .small-nav {
@@ -392,23 +405,48 @@ h1 {
     animation: none;
 }
 
+.light-switch-shadow {
+    filter: drop-shadow(0px 10px #00000063);
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 900;
+}
+
+.light-switch-container {
+    width: 200px;
+    height: 200px;
+    clip-path: polygon(81% 16%, 78% 8%, 71% 4%, 63% 3%, 51% 4%, 44% 6%, 37% 9%, 28% 18%, 21% 30%, 15% 46%, 9% 65%, 6% 80%, 2% 94%, 0 100%, 14% 100%, 32% 98%, 52% 95%, 71% 90%, 83% 83%, 93% 74%, 98% 64%, 100% 52%, 100% 38%, 97% 29%, 91% 24%, 81% 22%);
+    background-color: #1d5706;
+    background: linear-gradient(100deg, #5b811d, #1d5706)
+}
+
 .light-switch {
     width: 100%;
     height: 100%;
-    background-color: #143a05;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template: repeat(7, 1fr) / repeat(7, 1fr);
 }
 
 .light-switch i {
     font-size: 2rem;
-    margin: 10%;
     height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.light-switch i:hover {
+    cursor: pointer;
+}
+
+#moon {
+    grid-area: 3 / 5 / 5 / 7;
+}
+
+#sun {
+    grid-area: 5 / 2 / 7 / 4;
 }
 
 @keyframes arrow-jump {
@@ -1186,6 +1224,10 @@ footer {
 }
 
 @media only screen and (max-width: 425px) {
+    html {
+        font-size: 12;
+    }
+    
     h1 {
         font-size: 4rem;
     }

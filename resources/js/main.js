@@ -5,6 +5,14 @@ const smallNavArrowBox = document.getElementById('small-nav-arrow-box');
 const smallNav = document.getElementById('small-nav-links');
 smallNav.style.right = '100%';
 
+smallNavArrowBox.onmouseover = function() {
+    smallNavArrow.style.animationPlayState = 'paused';
+}
+
+smallNavArrowBox.onmouseleave = function() {
+    smallNavArrow.style.animationPlayState = 'running';
+}
+
 smallNavArrowBox.onclick = function() {
 
     smallNavArrow.style.animation = 'none';

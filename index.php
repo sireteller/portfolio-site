@@ -57,8 +57,10 @@
                 </div>
             </div>
 
-            <div class="light-switch-container">
-                <div class="light-switch"><i id="sun" class="fas fa-sun"></i><i id="moon" class="fas fa-moon"></i></div>    
+            <div class="light-switch-shadow">
+                <div class="light-switch-container">
+                    <div class="light-switch"><i id="sun" class="fas fa-sun"></i><i id="moon" class="fas fa-moon"></i></div>    
+                </div>
             </div>
         </header>
 

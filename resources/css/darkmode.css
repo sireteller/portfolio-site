@@ -2,11 +2,12 @@
     transition: all 0.8s ease-in 0s;
 }
 
-.fa-sun {
-    color: #3a6e25;
+#sun {
+    color: #498034;
 }
 
-.fa-moon {
+#moon {
     color: #b8e2ac;
-    background: radial-gradient(closest-side, #629953b0, #b8e2ac00)
+    background: radial-gradient(closest-side, #629953b0, #b8e2ac00);
+    transform: scale(1.5);
 }

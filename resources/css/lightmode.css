@@ -15,12 +15,6 @@ body {
 
 /* BANNER */
 
-h1 {
-    color: #2c1b4d;
-    background-color: #cdbbec;
-    text-shadow: 5px 5px #ac81cf;
-}
-
 .banner-bg {
     background: linear-gradient(#cdbbec54, #cdbbec54), url('../images/lilac-oilified.jpg');
     background-size: cover;
@@ -29,92 +23,16 @@ h1 {
     width: 100%;
 }
 
-.banner span {
-    color: #0e061e;
-    background-color: #cdbbecc4;
-}
-
-.banner-buttons-container {
-    background-color: #cdbbec85;
-}
-
-.button-banner {
-    background-color: #e2d453;
-    color: #807410;
-    border-top: 2px solid #fff387;
-    box-shadow: 0px 5px #7c710a, 10px 0px #7c710a, 10px 5px #7c710a;
-}
-
-.button-banner:hover {
-    background-color: #e7dc7b;
-    color: #968a20;
-}
-
-.button-banner:active {
-    background-color: #8a7d10;
-    color: #524b11;
-}
-
 /* NAV BAR */
 
-.small-nav,
-.small-nav a,
-#small-nav-arrow {
-    color: #807410;
+#moon {
+    color: #498034;
 }
 
-#small-nav-links {
-    background-color: #e2d453;
-    border-right: 1px solid #fcf6c0;
-    border-bottom: 1px solid #fcf6c0;
-}
-
-.small-nav span {
-    background-color: #8a7d10;
-    color: #f5eb8f;
-}
-
-#small-nav-arrow {
-    background-color: #e2d453;
-}
-
-nav {
-    background-color: #e2d453;
-    background: linear-gradient(#e2d453, #f1e789);
-    border-bottom: 1px solid #fcf6c0;
-}
-
-nav a {
-    color: #807410;
-}
-
-nav li {
-    border-right: 2px solid #7c710a;
-}
-
-nav li:hover,
-nav a:hover {
-    background-color: #ebe18b;
-    color: #968a20;
-}
-
-nav li:active,
-nav a:active {
-    background-color: #8a7d10;
-    color: #524b11;
-}
-
-.light-switch {
-    background-color: #8a7d10;
-}
-
-.fa-moon {
-    color: #b8aa30;
-}
-
-.fa-sun {
-    color: #f5eb8f;
-    background: radial-gradient(closest-side, #d3c545d5, #e2d45300)
+#sun {
+    color: #b8e2ac;
+    background: radial-gradient(closest-side, #629953b0, #b8e2ac00);
+    transform: scale(1.5);
 }
 
 /* ABOUT ME */
