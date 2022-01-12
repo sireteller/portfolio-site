@@ -118,11 +118,10 @@
             <section class="best-works">
 
                 <div id="zoom-box">
-                    <div class="zoom-filler"></div>
-                    <img src="#" alt="" id="zoomed-img"/>
-                    <div class="zoom-filler">
-                        <span id="close">X</span>
+                    <div class="zoomed-img-container">
+                        <img src="#" alt="" id="zoomed-img"/>
                     </div>
+                    <span id="close">X</span>
                 </div>
 
                 <div class="background-pattern"></div>

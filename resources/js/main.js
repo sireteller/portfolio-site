@@ -179,7 +179,7 @@ let artImgArray = [artImg1, artImg2, artImg3];
 let zoomImage = (event) => {
 
     if(!window.matchMedia('(max-width: 1024px)').matches) {
-        zoomBox.style.display = 'flex';
+        zoomBox.style.display = 'grid';
         zoomedImg.src = event.target.src;
     }
 }
@@ -189,6 +189,7 @@ let closeFunc = () => {
 }
 
 x.onclick = closeFunc;
+zoomBox.onclick = closeFunc;
 
 for (i = 0; i < artImgArray.length; i++) {
     artImgArray[i].onclick = zoomImage;

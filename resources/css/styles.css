@@ -393,7 +393,7 @@ h1 {
     align-items: center;
     grid-area: 1 / 6 / 8 / 7;
     background: linear-gradient(0.25turn, #000000d3, #00000017);
-    color: #fff9e1;
+    color: #ffffff;
     font-size: 2rem;
 }
 
@@ -411,7 +411,7 @@ h1 {
 }
 
 .light-switch-shadow {
-    filter: drop-shadow(0px 10px #00000063);
+    filter: drop-shadow(0px 10px 3px #00000063);
     position: fixed;
     top: 10px;
     right: 10px;
@@ -699,34 +699,40 @@ h4.artwork {
 }
 
 #zoom-box {
-    background-color: #000000c9;
-    position: absolute;
-    width: 100%;
-    height: 850px;
     display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 11;
+    grid-template: repeat(6, 1fr) / repeat(6, 1fr);
+    background-color: #0e061ebb;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
 }
 
-.zoom-filler {
-    height: 90%;
+.zoomed-img-container {
+    grid-area: 1 / 1 / 7 / 7;
     display: flex;
-    justify-content: start;
-    align-items: start;
+    justify-content: center;
+    align-items: center;
+    z-index: 102;
 }
 
 #zoomed-img {
-    height: 90%;
-    width: auto;
+    object-fit: contain;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 #close {
-    position: relative;
-    font-size: 3rem;
+    grid-area: 1 / 6 / 2 / 7;
+    color: #ffffff;
+    text-align: right;
+    font-size: 2.5rem;
     font-family: 'Raleway', sans-serif;
-    color: #cdbbec;
-    padding: 0 10px;
+    font-weight: 600;
+    padding: 50px;
+    z-index: 103;
 }
 
 #close:hover {

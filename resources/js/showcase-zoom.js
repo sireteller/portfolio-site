@@ -23,6 +23,7 @@ let closeFunc = () => {
 }
 
 x.onclick = closeFunc;
+zoomBox.onclick = closeFunc;
 
 for (i = 0; i < artImgArray.length; i++) {
     artImgArray[i].onclick = zoomImage;
