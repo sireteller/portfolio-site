@@ -103,6 +103,8 @@ smallPhotoSwitch.onclick = function() {
     }, 200);
 }
 
+// RETURN TO DEFAULT ON WINDOW RESIZE TO AVOID ISSUES WITH THE WRONG IMAGE STAYING BEHIND
+
 window.onresize = function() {
     smallDrawing.removeAttribute('style');
     smallDrawingSwitch.removeAttribute('style');
