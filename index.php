@@ -47,13 +47,16 @@
                     <a href="./projects.html"><i class="fas fa-file"></i>Web Projects</a>
                     <a href="./art.html"><i class="fas fa-palette"></i>Art Showcase</a>
                     <div class="small-nav-game-div">
-                        <a href="./game.html"><i class="fas fa-gamepad"></i>Game</a> <span class="game-asterisk">*Large screens only</span>
+                        <a href="./game.html"><i class="fas fa-gamepad"></i>Game</a> <span class="game-asterisk-text"><span class="game-asterisk">*</span>Large screens only</span>
                     </div>
 
                     <span class="small-nav-title">Scroll down to content on this page</span>
                     <a href="#about-me">About Me</a>
                     <a href="#best-works">Best Works</a>
                     <a href="#contact">Contact Me</a>
+
+                    <span class="small-nav-title">Follow my progress on</span>
+                    <a href="https://github.com/evergreenlilac"><i class="fab fa-github"></i>Github <sup><i class="fas fa-external-link-alt"></i></sup> </a>
                 </div>
             </div>
 
@@ -103,7 +106,9 @@
 
                         While I know that there are many fantastic frameworks and libraries out there,
                         I decided to challenge myself by only using vanilla HTML, CSS and JS to build this page.
-                        I really hope that you like what you see.
+                        I really hope that you like what you see.<br><br>
+
+                        Critique me so that I can improve myself!
                     </p>
                 </div>
 
@@ -188,7 +193,7 @@
 
                     Fill out this handy-dandy form and I'll get back to you as soon as I can or contact me directly via<br><br>
 
-                    <i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/siret-eller-46108a224/" target="blank">LinkedIn</a><br><br>
+                    <i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/siret-eller-46108a224/">LinkedIn</a> <sup><i class="fas fa-external-link-alt"></i></sup> <br><br>
                     or<br><br>
                     <i class="fas fa-envelope"></i><span class="mail">sireteller@gmail.com</span>
                     </p>
@@ -197,7 +202,7 @@
 
                     Fill out this handy-dandy form and I'll get back to you as soon as I can or contact me directly via<br><br>
 
-                    <i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/siret-eller-46108a224/" target="blank">LinkedIn</a>  or  
+                    <i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/siret-eller-46108a224/">LinkedIn</a> <sup><i class="fas fa-external-link-alt"></i></sup>  or  
                     <i class="fas fa-envelope"></i><span class="mail">sireteller@gmail.com</span></p>
                 </div>
 

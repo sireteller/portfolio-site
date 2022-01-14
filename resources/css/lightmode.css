@@ -108,13 +108,13 @@ body {
 /* CONTACT ME */
 
 .contact {
-    background-color: #eebbd7;
+    background-color: #ddaec7;
 }
 
 .contact h2,
 .submit {
     color: #33071f;
-    background-color: #d689b2;
+    background-color: #d48bb2;
 }
 
 .submit {
@@ -166,12 +166,12 @@ footer {
     background-color: #1d5706;
 }
 
-/* ***PROJECTS*** */
+/* ***PROJECTS PAGE*** */
 .box {
     background-color: #9a93d6 !important;
 }
 
-/* ***ART SHOWCASE*** */
+/* ***ART SHOWCASE PAGE*** */
 .showcase {
     border: 2px solid #fff !important;
     background-color: #e2d5f8a1 !important;
