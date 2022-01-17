@@ -4,12 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Siret Eller | Portfolio Home Page</title>
+        <title>Siret Eller | Portfolio - Home</title>
         <link rel="icon" href="./resources/images/singlelilac.png">
         <link rel="stylesheet" href="./resources/css/styles.css">
         <link rel="stylesheet" href="./resources/css/darkmode.css" id="modesheet">
         <script src="./resources/js/main.js" defer></script>
         <script src="./resources/js/modeswitch.js" defer></script>
+        <script src="./resources/js/nav-drawer.js" defer></script>
         <script src="https://kit.fontawesome.com/28e55809cd.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,25 +20,24 @@
     </head>
 
     <body>
-        <header>
-            <div class="banner-bg">
-                <div class="banner">
+        <div class="banner-bg">
+            <div class="banner">
 
-                    <img src="./resources/images/leaf1.png" alt="" id="banner-leaf-1">
-                    <img src="./resources/images/leaf2.png" alt="" id="banner-leaf-2">
-                    <img src="./resources/images/leaf3.png" alt="" id="banner-leaf-3">
-                    <img src="./resources/images/leaf4.png" alt="" id="banner-leaf-4">
-                    <img src="./resources/images/leaf5.png" alt="" id="banner-leaf-5">
+                <img src="./resources/images/leaf1.png" alt="" id="banner-leaf-1">
+                <img src="./resources/images/leaf2.png" alt="" id="banner-leaf-2">
+                <img src="./resources/images/leaf3.png" alt="" id="banner-leaf-3">
+                <img src="./resources/images/leaf4.png" alt="" id="banner-leaf-4">
+                <img src="./resources/images/leaf5.png" alt="" id="banner-leaf-5">
 
-                    <div class="banner-blurry-strip"></div>
+                <div class="banner-blurry-strip"></div>
 
-                    <h1>Siret Eller</h1>
-                    <span class="personal-title">Aspiring Front-end Developer and Artist</span>
+                <h1>Siret Eller</h1>
+                <span class="personal-title">Aspiring Front-end Developer and Artist</span>
 
-                </div>
             </div>
+        </div>
 
-
+        <nav>
             <div id="small-nav-arrow-box-open">
                 <i class="fas fa-chevron-right" id="small-nav-arrow-open"></i>
             </div>
@@ -64,13 +64,13 @@
                     <a href="https://github.com/evergreenlilac"><i class="fab fa-github"></i>Github <sup><i class="fas fa-external-link-alt"></i></sup> </a>
                 </div>
             </div>
+        </nav>
 
-            <div class="light-switch-shadow">
-                <div class="light-switch-container">
-                    <div class="light-switch"><i id="sun" class="fas fa-sun"></i><i id="moon" class="fas fa-moon"></i></div>    
-                </div>
+        <div class="light-switch-shadow">
+            <div class="light-switch-container">
+                <div class="light-switch"><i id="sun" class="fas fa-sun"></i><i id="moon" class="fas fa-moon"></i></div>    
             </div>
-        </header>
+        </div>
 
         <div class="section-container">
             <div class="anchor" id="about-me"></div>

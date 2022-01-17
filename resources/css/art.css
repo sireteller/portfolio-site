@@ -1,11 +1,5 @@
 body {
     background: linear-gradient(#0e061e, #7c61b3);
-    height: 1600px;
-}
-
-main {
-    position: relative;
-    top: 120px;
 }
 
 #showcase-zoom {
@@ -16,7 +10,11 @@ main {
     height: 100%;
     position: fixed;
     top: 0;
-    z-index: 101;
+    z-index: 2000;
+}
+
+#showcase-zoom:hover {
+    cursor: zoom-out;
 }
 
 #showcase-zoom-close {
@@ -39,7 +37,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 102;
 }
 
 #showcase-zoom-img {
@@ -54,6 +51,7 @@ main {
     align-items: start;
     width: 100%;
     height: 100%;
+    padding: 50px 0;
 }
 
 .showcase {
@@ -147,11 +145,6 @@ main {
 .collection-name h4 {
     font-size: 0.75rem;
     font-weight: 400;
-}
-
-footer {
-    position: relative;
-    top: 180px;
 }
 
 /* ***RESPONSIVE DESIGN*** */

@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: #cdbbec;
+    background-color: #dfd2f5;
 }
 
 
@@ -159,22 +159,19 @@ textarea:focus {
     outline: none;
 }
 
-/* FOOTER */
-
-footer {
-    color: #b8e2ac;
-    background-color: #1d5706;
-}
-
 /* ***PROJECTS PAGE*** */
 .box {
     background-color: #9a93d6 !important;
 }
 
 /* ***ART SHOWCASE PAGE*** */
+.art-bg {
+    background: linear-gradient(#ded5f0, #7c61b3);
+}
+
 .showcase {
     border: 2px solid #fff !important;
-    background-color: #e2d5f8a1 !important;
+    background-color: #ede9f5a1 !important;
 }
 
 .collection-name {

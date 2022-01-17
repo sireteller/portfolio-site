@@ -346,6 +346,7 @@ h1 {
     top: 0;
     left: 0;
     z-index: 1100;
+    width: 410px;
     height: 100%;
     font-family: 'Philosopher', 'Lucida Bright', 'Times New Roman', serif;
     font-size: 1.1rem;
@@ -419,7 +420,7 @@ h1 {
     top: 0;
     left: 0;
     height: 100%;
-    width: 68.2px;
+    width: 68px;
     z-index: 1100;
 }
 
@@ -1369,7 +1370,7 @@ footer span {
     }
 
     #small-nav-arrow-box-open {
-        height: 100px;
+        height: 80px;
     }
 
     .light-switch-container {
@@ -1407,6 +1408,11 @@ footer span {
     h1 {
         font-size: 2.5rem;
         text-shadow: 3px 3px #452261;
+    }
+
+    #small-nav {
+        width: 320px;
+        font-size: 1rem;
     }
 
     #banner-leaf-4 {
