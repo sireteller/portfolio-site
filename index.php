@@ -261,7 +261,7 @@
         </div>
 
         <footer>
-            <span class="copr">&copy; 2021 Siret Eller</span>
+            <span class="copr">&copy; 2022 Siret Eller</span>
         </footer>
     </body>
 </html>
