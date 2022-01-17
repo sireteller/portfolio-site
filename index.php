@@ -37,9 +37,14 @@
                 </div>
             </div>
 
-            <div class="small-nav">
-                <div id="small-nav-arrow-box">
-                    <i class="fas fa-chevron-right" id="small-nav-arrow"></i>
+
+            <div id="small-nav-arrow-box-open">
+                <i class="fas fa-chevron-right" id="small-nav-arrow-open"></i>
+            </div>
+
+            <div id="small-nav">
+                <div id="small-nav-arrow-box-close">
+                    <i class="fas fa-chevron-right" id="small-nav-arrow-close"></i>
                 </div>
 
                 <div id="small-nav-links">
@@ -119,15 +124,15 @@
                 <div class="button-container"><button class="photo-switch" id="photo-switch-small">Cartoonify</button></div>
             </section>
 
-            <div class="anchor" id="best-works"></div>
-            <section class="best-works">
-
-                <div id="zoom-box">
+            <div id="zoom-box">
                     <div class="zoomed-img-container">
                         <img src="#" alt="" id="zoomed-img"/>
                     </div>
                     <span id="close">X</span>
-                </div>
+            </div>
+            
+            <div class="anchor" id="best-works"></div>
+            <section class="best-works">
 
                 <div class="background-pattern"></div>
 

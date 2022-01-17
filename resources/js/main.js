@@ -1,34 +1,46 @@
 //SMALL NAV TRIGGER
 
-const smallNavArrow = document.getElementById('small-nav-arrow');
-const smallNavArrowBox = document.getElementById('small-nav-arrow-box');
-const smallNav = document.getElementById('small-nav-links');
-smallNav.style.right = '100%';
+const smallNavArrowClose = document.getElementById('small-nav-arrow-close');
+const smallNavArrowBoxClose = document.getElementById('small-nav-arrow-box-close');
+const smallNavArrowOpen = document.getElementById('small-nav-arrow-open');
+const smallNavArrowBoxOpen = document.getElementById('small-nav-arrow-box-open');
+const smallNavLinks = document.getElementById('small-nav-links');
+const smallNav = document.getElementById('small-nav');
 
-smallNavArrowBox.onmouseover = function() {
-    smallNavArrow.style.animationPlayState = 'paused';
+smallNavArrowBoxOpen.onmouseover = function() {
+    smallNavArrowOpen.style.animationPlayState = 'paused';
 }
 
-smallNavArrowBox.onmouseleave = function() {
-    smallNavArrow.style.animationPlayState = 'running';
+smallNavArrowBoxOpen.onmouseleave = function() {
+    smallNavArrowOpen.style.animationPlayState = 'running';
 }
 
-smallNavArrowBox.onclick = function() {
+smallNavArrowBoxOpen.onclick = function() {
 
-    smallNavArrow.style.animation = 'none';
-    smallNavArrow.style.position = 'static';
+    smallNavArrowOpen.style.animation = 'none';
+    smallNavArrowOpen.style.position = 'static';
+    smallNavArrowBoxOpen.style.display = 'none';
+    smallNav.style.display = 'grid';
 
-    if (smallNav.style.right === '100%') {
-        smallNavArrow.style.right = '0%';
-        smallNavArrowBox.style.right = '0%';
-        smallNav.style.right = '0%';
-        smallNavArrow.style.transform = 'rotate(180deg)';
-    } else {
-        smallNavArrow.style.right = '500%';
-        smallNavArrowBox.style.right = '500%';
-        smallNav.style.right = '100%';
-        smallNavArrow.style.transform = 'rotate(0deg)';
-    }
+    setTimeout(() => {
+        smallNavArrowClose.style.right = '0%';
+        smallNavArrowBoxClose.style.right = '0%';
+        smallNavLinks.style.right = '0%';
+        smallNavArrowClose.style.transform = 'rotate(180deg)';
+    }, 50);
+    
+}
+
+smallNavArrowBoxClose.onclick = function() {
+    smallNavArrowClose.style.right = '500%';
+    smallNavArrowBoxClose.style.right = '500%';
+    smallNavLinks.style.right = '100%';
+    smallNavArrowClose.style.transform = 'rotate(0deg)';
+
+    setTimeout(() => {
+        smallNav.style.display = 'none';
+        smallNavArrowBoxOpen.style.display = 'flex';
+    }, 800);
 }
 
 //ABOUT ME PICTURE SWITCH
@@ -45,11 +57,11 @@ drawingSwitch.onclick = function() {
     drawing.style.left = '10000px';
 
     setTimeout(() => {
-    photo.style.right = '0';
+        photo.style.right = '0';
     }, 100);
 
     setTimeout(() => {
-    drawing.style.display = 'none';
+        drawing.style.display = 'none';
     }, 200);
 }
 
@@ -177,11 +189,8 @@ let artImg3 = document.getElementById('art-3');
 let artImgArray = [artImg1, artImg2, artImg3];
 
 let zoomImage = (event) => {
-
-    if(!window.matchMedia('(max-width: 1024px)').matches) {
-        zoomBox.style.display = 'grid';
-        zoomedImg.src = event.target.src;
-    }
+    zoomBox.style.display = 'grid';
+    zoomedImg.src = event.target.src;
 }
 
 let closeFunc = () => {
