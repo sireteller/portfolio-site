@@ -9,6 +9,13 @@ main {
 
 button {
     font-family: 'Red Hat Display', sans-serif;
+    font-size: 1.25rem;
+    height: 70px;
+    width: 200px;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 .cursor-pointer:hover {
@@ -58,6 +65,7 @@ button {
 .intro-para {
     grid-area: 2 / 4 / 4 / 7;
     padding-right: 40px;
+    font-size: 1.4rem;
 }
 
 .easy-mode,
@@ -129,16 +137,22 @@ button {
     padding: 50px;
     max-width: 600px;
     max-height: 600px;
+    min-height: 400px;
 }
 
 #win span {
     display: none;
     grid-area: 3 / 1 / 4 / 4;
     text-align: center;
+    font-size: 1.75rem;
+    font-weight: 600;
 }
 
-#next {
-    grid-area: 4 / 2 / 5 / 3;
+.next-container {
+    grid-area: 4 / 1 / 5 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 /* ***END*** */
@@ -147,4 +161,10 @@ button {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+#end span {
+    padding: 50px;
+    font-size: 1.5rem;
+    font-weight: 600;
 }

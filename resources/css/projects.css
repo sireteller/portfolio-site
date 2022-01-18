@@ -7,7 +7,7 @@
     padding: 0;
 }
 
-.blurred-bg {
+.container-2 {
     grid-area: 1 / 1 / 2 / 2;
     position: relative;
     margin: 0 90px;
@@ -16,8 +16,11 @@
     display: grid;
     grid-template: repeat(2, 1fr) / repeat(4, 1fr);
     gap: 50px;
-    filter: blur(12px);
     z-index: 0;
+}
+
+.container-2 a {
+    text-decoration: none;
 }
 
 .box {
@@ -26,10 +29,32 @@
     background-color: #392d6d;
     margin: 0;
     padding: 0;
+    display: grid;
+    grid-template: repeat(5, 1fr) / 1fr;
+}
+
+.title-bg {
+    backdrop-filter: blur(8px);
+    grid-area: 3 / 1 / 4 / 2;
+    z-index: 10;
+}
+
+.box-title {
+    font-size: 1.5rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    grid-area: 3 / 1 / 4 / 2;
+    z-index: 11;
+    text-align: center;
+    margin: auto;
 }
 
 .box-1 {
     grid-area: 1 / 1 / 2 / 2;
+    background-image: url('../images/game/find-miko/mikoforintro.png');
+    background-size: cover;
 }
 
 .box-2 {
@@ -60,45 +85,6 @@
     grid-area: 2 / 4 / 3 / 5;
 }
 
-.clear-overlay {
-    grid-area: 1 / 1 / 2 / 2;
-    display: grid;
-    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
-    width: 100%;
-    z-index: 10;
-}
-
-.projects-filler {
-    grid-area: 2 / 1 / 3 / 2;
-    background-color: #302553ad;
-    height: 200px;
-}
-
-.clear-overlay span {
-    grid-area: 2 / 2 / 3 / 3;
-    background-color: #302553ad;
-    height: 200px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.5rem;
-    color: #cdbbec;
-    display: flex;
-    align-items: center;
-    padding: 0 20px 0 0;
-    margin: 0;
-}
-
-.doodle-container {
-    grid-area: 1 / 1 / 4 / 2;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.doodle-container img {
-    width: 80%;
-}
-
 footer {
     z-index: 1;
 }
@@ -111,13 +97,9 @@ footer {
         display: none;
     }
 
-    .blurred-bg {
+    .container-2 {
         grid-template: repeat(2, 1fr) / repeat(3, 1fr);
         margin: 0 50px;
-    }
-
-    .doodle-container img {
-        width: 90%;
     }
 }
 
@@ -127,25 +109,19 @@ footer {
         display: none;
     }
 
-    .blurred-bg {
+    .container-2 {
         grid-template: repeat(2, 1fr) / repeat(2, 1fr);
         margin: 0 30px;
-    }
-
-    .doodle-container img {
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width: 615px) {
-    .clear-overlay span {
-        font-size: 1.25rem;
     }
 }
 
 @media only screen and (max-width: 425px) {
-    .blurred-bg {
+    .container-2 {
         grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    }
+
+    .box {
+        height: 250px;
     }
 
     .box-3 {
@@ -156,20 +132,5 @@ footer {
     .box-7 {
         display: block;
         grid-area: 3 / 2 / 4 / 3;
-    }
-}
-
-@media only screen and (max-width: 320px) {
-    .projects-filler {
-        display: none;
-    }
-
-    .doodle-container {
-        grid-area: 1 / 1 / 2 / 3;
-    }
-
-    .clear-overlay span {
-        grid-area: 2 / 1 / 3 / 3;
-        padding: 0 20px;
     }
 }
