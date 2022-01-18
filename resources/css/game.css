@@ -133,18 +133,3 @@ main {
     justify-content: center;
     align-items: flex-end;
 }
-
-/* ***INTRO*** */
-
-#intro {
-    display: none;
-    grid-template: 1fr / repeat(2, 1fr);
-}
-
-.pirate-intro {
-    grid-area: 1 / 1 / 2 / 2;
-}
-
-.doge-intro {
-    grid-area: 1 / 2 / 2 / 3;
-}

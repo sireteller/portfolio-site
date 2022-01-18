@@ -67,8 +67,3 @@ treat.onclick = () => {
     awakePara2.style.display = 'inline';
     dogAwakeButtonsContainer.style.display = 'none';
 }
-
-playButton.onclick = () => {
-    dogAwakeDiv.style.display = 'none';
-    introDiv.style.display = 'grid';
-}
