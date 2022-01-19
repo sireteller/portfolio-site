@@ -8,11 +8,8 @@ const smallNavLinks = document.getElementById('small-nav-links');
 const smallNav = document.getElementById('small-nav');
 
 smallNavArrowBoxOpen.onmouseover = function() {
-    smallNavArrowOpen.style.animationPlayState = 'paused';
-}
-
-smallNavArrowBoxOpen.onmouseleave = function() {
-    smallNavArrowOpen.style.animationPlayState = 'running';
+    smallNavArrowOpen.style.animation = 'none';
+    smallNavArrowOpen.style.position = 'static';
 }
 
 smallNavArrowBoxOpen.onclick = function() {

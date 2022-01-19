@@ -29,12 +29,17 @@ const winMikoArr = [winMiko1, winMiko2, winMiko3, winMiko4, winMiko5];
 const end = document.getElementById('end');
 const again = document.getElementById('again');
 
-console.log('THIS IS LIVE 100');
+const giveUp = document.getElementById('give-up');
+
+console.log('THIS IS LIVE 102');
+
+// EASY MODE TRIGGER
 
 easyBtn.onclick = () => {
     easyMode = true;
     intro.style.display = 'none';
     lvl1.style.display = 'block';
+    giveUp.style.display = 'block';
 
     if (!mikoArr[0].classList.contains('cursor-pointer')) {
         for (let i = 0; i < mikoArr.length; i++) {
@@ -43,10 +48,13 @@ easyBtn.onclick = () => {
     }
 }
 
+// HARD MODE TRIGGER
+
 hardBtn.onclick = () => {
     easyMode = false;
     intro.style.display = 'none';
     lvl1.style.display = 'block';
+    giveUp.style.display = 'block';
 
     if (mikoArr[0].classList.contains('cursor-pointer')) {
         for (let i = 0; i < mikoArr.length; i++) {
@@ -55,6 +63,8 @@ hardBtn.onclick = () => {
     }
 }
 
+// CLICK ON MIKO = WIN
+
 for (let i = 0; i < mikoArr.length; i++) {
     mikoArr[i].onclick = () => {
         lvlArr[i].style.display = 'none';
@@ -62,8 +72,12 @@ for (let i = 0; i < mikoArr.length; i++) {
         winMiko.src = winMikoArr[i];
         let j = Math.floor(Math.random() * 8);
         winMsgArr[j].style.display = 'inline';
+
+        mikoArr[i].classList.remove('gave-up');
     }
 }
+
+// NEXT LEVEL TO END
 
 let lvlCount = 1
 
@@ -83,7 +97,18 @@ next.onclick = () => {
     }
 }
 
+// PLAY AGAIN
+
 again.onclick = () => {
     end.style.display = 'none';
     intro.style.display = 'grid';
+    giveUp.style.display = 'none';
+}
+
+// GIVE UP
+
+giveUp.onclick = () => {
+    if (!mikoArr[lvlCount - 1].classList.contains('gave-up')) {
+        mikoArr[lvlCount - 1].classList.add('gave-up');
+    }
 }
