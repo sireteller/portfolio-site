@@ -106,8 +106,8 @@
                         Currently I'm independetly learning front end development online. 
                         The creative aspect was the main reason why I was drawn to it at first, but now I'm also really enjoying learning about how the web works. <br><br>
 
-                        While I consider digital art creation to just be a hobby right now, 
-                        I <em>am</em> open to discussing any commissions You might like to make after browsing some examples.<br><br>
+                        As for my artist side, I consider digital art creation to just be a hobby right now, but 
+                        I am open to discussing commission work if something in my gallery should happen to catch your eye.<br><br>
 
                         While I know that there are many fantastic frameworks and libraries out there,
                         I decided to challenge myself by only using vanilla HTML, CSS and JS to build this page.
@@ -141,14 +141,21 @@
                     <h2>Best Works</h2>
                 </div>
 
-                <h4 class="webpages">Webpages</h4>
+                <h4 class="webpages">Web projects</h4>
                 <div class="web-gallery gallery">
                     <div class="carousel">
                         <div class="left-arrow-container">
                             <i class="fas fa-chevron-left" id="arrow-left-web"></i>
                         </div>
 
-                        <span class="coming-soon">Content coming soon</span>
+                        <div class="find-miko-preview">
+                            <img src="./resources/images/game/find-miko/mikoforintro.png" alt=""/>
+                            <div class="preview-text-box">
+                                <a href="./find-miko.html" class="preview-title">Miko's Big Day Out</a>
+                                <span class="preview-intro">A small web game built with vanilla JS, HTML and CSS</span>
+                            </div>
+                        </div>
+                        
 
                         <div class="right-arrow-container">
                             <i class="fas fa-chevron-right" id="arrow-right-web"></i>

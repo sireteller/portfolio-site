@@ -826,6 +826,65 @@ h4.artwork {
     justify-content: end;
 }
 
+#arrow-left-web,
+#arrow-right-web {
+    color: #7e788a;
+}
+
+.web-gallery .left-arrow-container:hover,
+.web-gallery .right-arrow-container:hover {
+    cursor: default;
+}
+
+.find-miko-preview {
+    grid-area: 1 / 2 / 10 / 9;
+    display: grid;
+    grid-template: repeat(3, 1fr) / 1fr;
+}
+
+.find-miko-preview img {
+    max-height: 100%;
+    max-width: 100%;
+    grid-area: 1 / 1 / 4 / 2;
+    position: relative;
+    z-index: 10;
+    margin: auto auto;
+}
+
+.preview-text-box {
+    grid-area: 2 / 1 / 3 / 2;
+    backdrop-filter: blur(8px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 11;
+    font-family: 'Raleway', sans-serif;
+}
+
+.preview-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #fff;
+    padding-bottom: 10px;
+    transition: all 0s linear 0s;
+}
+
+.preview-title:hover {
+    text-decoration: none;
+}
+
+.preview-title:active {
+    color: #b48bbe;
+}
+
+.preview-intro {
+    color: #ffffff;
+    padding: 0 10px;
+}
+
 .images-container {
     grid-area: 1 / 1 / 10 / 10;
     display: grid;
@@ -936,16 +995,6 @@ h4.artwork {
 
 .art-see-more {
     grid-area: 9 / 2 / 10 / 3;
-}
-
-.coming-soon {
-    grid-area: 5 / 2 / 6 / 9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Raleway', sans-serif;
-    color: #8f70aa;
-    font-size: 1.5rem;
 }
 
 /* ****CONTACT ME SECTION STYLES**** */
