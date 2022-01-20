@@ -11,12 +11,25 @@ main {
 button {
     font-family: 'Red Hat Display', sans-serif;
     font-size: 1.25rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #d1936a;
+    background: linear-gradient(#d1936a, #9b6744);
     height: 70px;
     width: 200px;
+    color: #fff;
+    text-shadow: 1px 1px #000;
 }
 
 button:hover {
     cursor: pointer;
+    background-color: #ca9a7a;
+    background: linear-gradient(#ca9a7a, #ca9a7a);
+}
+
+button:active {
+    background-color: #916345;
+    background: linear-gradient(#916345, #916345);
 }
 
 .cursor-pointer:hover {
@@ -51,15 +64,25 @@ button:hover {
 
 .find-miko-title {
     font-family: 'Red Hat Display', sans-serif;
-    font-size: 3rem;
+    font-size: 4.5rem;
+    font-weight: 600;
     grid-area: 1 / 1 / 2 / 7;
     text-align: center;
-    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1.1rem;
+    color: #fff;
+    border-bottom: 3px solid #fff;
+    background-color: #d1936a;
+    background: linear-gradient(to right top, #835334, #a56a42, #d1936a, #d4a688, #f0dcd0);
 }
 
 .intro-miko {
     width: 500px;
-    margin: 0 auto;
+    margin: auto auto;
+    border: 3px solid #fff;
+    border-radius: 20px;
     grid-area: 2 / 1 / 7 / 4;
 }
 
@@ -67,6 +90,7 @@ button:hover {
     grid-area: 2 / 4 / 4 / 7;
     padding-right: 40px;
     font-size: 1.4rem;
+    margin: auto 0;
 }
 
 .easy-mode,
@@ -145,7 +169,7 @@ button:hover {
     display: none;
     grid-area: 3 / 1 / 4 / 4;
     text-align: center;
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: 600;
 }
 
@@ -166,7 +190,7 @@ button:hover {
 
 #end span {
     padding: 50px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 600;
 }
 

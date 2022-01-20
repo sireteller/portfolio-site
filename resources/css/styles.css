@@ -868,8 +868,9 @@ h4.artwork {
     font-size: 1.75rem;
     font-weight: 600;
     color: #fff;
-    padding-bottom: 10px;
+    padding: 0 10px 10px 10px;
     transition: all 0s linear 0s;
+    font-family: 'Philosopher', 'Times New Roman', serif;
 }
 
 .preview-title:hover {
