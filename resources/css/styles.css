@@ -1,4 +1,4 @@
-html {
+:root {
 	--color-general-bg-primary: #f9f8fb;
 	--color-general-bg-secondary: #eff5f9;
 	--color-nav-bg-primary: #a5c0f3;
@@ -31,29 +31,75 @@ html {
 		#eec048 0.04deg,
 		#f4ef76 360deg
 	);
-	--gradient-showcase-bg: linear-gradient(
-		180deg,
-		#180e3400 0%,
-		#180e347d 100%
-	);
+	--gradient-showcase-bg: linear-gradient(180deg, #180e3400 0%, #180e347d 100%);
 
 	--border-button: 1px solid var(--color-button-border);
 	--border-form: 1px solid var(--color-general-border);
 
-	--box-shadow-general: 8px 0px 15px 0px #00000040,
-		-8px 0px 15px 0px #00000040;
+	--box-shadow-general: 8px 0px 15px 0px #00000040, -8px 0px 15px 0px #00000040;
 	--box-shadow-nav: 0px 2px 15px 0px #93abce;
 
-    --font-family-primary: 'Raleway', sans-serif;
-    --font-family-secondary: 'Philosopher', sans-serif;
-    --font-family-accent: 'Windsong', cursive;
+	--font-family-primary: "Raleway", sans-serif;
+	--font-family-secondary: "Philosopher", sans-serif;
+	--font-family-accent: "Windsong", cursive;
 
-    --font-size-12: 0.75rem;
-    --font-size-14: 0.875rem;
-    --font-size-16: 1rem;
-    --font-size-20: 1.35rem;
-    --font-size-24: 1.5rem;
-    --font-size-32: 2rem;
-    --font-size-36: 2.25rem;
-    --font-size-72: 4.5rem;
+	--font-size-12: 0.75rem;
+	--font-size-14: 0.875rem;
+	--font-size-16: 1rem;
+	--font-size-20: 1.35rem;
+	--font-size-24: 1.5rem;
+	--font-size-32: 2rem;
+	--font-size-36: 2.25rem;
+	--font-size-72: 4.5rem;
+}
+
+header {
+	display: grid;
+	grid-template: repeat(12, 1fr) / repeat(12, 1fr);
+}
+
+.header__intro {
+	grid-area: 1 / 1 / 13 / 13;
+}
+
+.header__nav {
+	grid-area: 11 / 1 / 13 / 13;
+	position: sticky;
+	top: 0;
+}
+
+.header__nav-primary,
+.header__nav-secondary {
+	display: flex;
+	justify-content: center;
+}
+
+.header__nav-primary {
+	background-color: var(--color-nav-bg-primary);
+}
+
+.header__nav-secondary {
+	background-color: var(--color-nav-bg-secondary);
+}
+
+.header__nav-item {
+	color: var(--color-nav-text);
+	font-family: var(--font-family-primary);
+	font-size: var(--font-size-20);
+	text-decoration: none;
+}
+
+.header__nav-item--primary {
+	padding: 1.5rem;
+	text-transform: uppercase;
+}
+
+.header__nav-item--secondary {
+	padding: 1.25rem 2rem;
+}
+
+.header__options {
+	position: fixed;
+	right: 0;
+	top: 0;
 }
