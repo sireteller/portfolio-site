@@ -2,12 +2,12 @@
 	--color-general-bg-primary: #f9f8fb;
 	--color-general-bg-secondary: #eff5f9;
 	--color-nav-bg-primary: #a5c0f3;
-	--color-nav-bg-primary--focus: #98b2e4;
+	--color-nav-bg-primary--active: #98b2e4;
 	--color-nav-bg-secondary: #cbe3f9;
-	--color-nav-bg-secondary--focus: #bed9f2;
+	--color-nav-bg-secondary--active: #bed9f2;
 	--color-accent-bg: #eec048;
 	--color-arrow-btn-bg: #180e3480;
-	--color-arrow-btn-bg--focus: var(--color-general-text);
+	--color-arrow-btn-bg--active: var(--color-general-text);
 	--color-arrow-btn: var(--color-general-bg-secondary);
 
 	--color-button-border: #ba9840;
