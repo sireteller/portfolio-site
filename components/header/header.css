@@ -1,3 +1,74 @@
-header {
-	color: white;
+.header {
+	align-items: center;
+	background-image: url(./assets/hero-bg-bottom.png);
+	background-repeat: repeat-x;
+	color: var(--color-header-text);
+	display: flex;
+	min-height: 30rem; /* 480px */
+	position: relative;
+}
+
+.header-stripe {
+	background-color: var(--color-accent-bg);
+	display: flex;
+	justify-content: center;
+	padding: var(--spacing-medium);
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+
+.header-stripe-text {
+	max-width: 45rem; /* 72px */
+	width: 100%;
+}
+
+.header-title {
+	font-family: var(--font-family-accent);
+	font-size: var(--font-size-x-large);
+	font-weight: var(--font-weight-regular);
+}
+
+.header-subtitle {
+	font-family: var(--font-family-secondary);
+	font-size: var(--font-size-medium);
+}
+
+.header-img-overlay {
+	bottom: -25%;
+	position: absolute;
+	right: 0;
+	z-index: 2;
+}
+
+.header-frost-overlay {
+	backdrop-filter: blur(2px);
+	background-color: #00000055;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 0;
+}
+
+/* 840px */
+@media only screen and (max-width: 52.5rem) {
+	.header-img-overlay {
+		bottom: -30%;
+	}
+}
+
+/* 640px */
+@media only screen and (max-width: 40rem) {
+	.header-img-overlay {
+		bottom: -20%;
+	}
+}
+
+/* 480px */
+@media only screen and (max-width: 30rem) {
+	.header-img-overlay {
+		bottom: -10%;
+	}
 }
