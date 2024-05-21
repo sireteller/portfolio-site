@@ -1,0 +1,32 @@
+.heading-2 {
+	align-items: center;
+	background: linear-gradient(
+		79.224deg,
+		rgba(41, 23, 113, 100%) 0%,
+		rgba(97, 94, 211, 100%) 60%,
+		rgba(46, 133, 197, 100%) 100%
+	);
+	color: var(--color-heading);
+	display: flex;
+	font-family: var(--font-family-secondary);
+	font-size: var(--font-size-large);
+	font-weight: var(--font-weight-bold);
+	justify-content: center;
+	padding: var(--spacing-large);
+	width: 100%;
+}
+
+.heading-2-text {
+	max-width: var(--max-width-content);
+	position: relative;
+}
+
+.heading-2-text::after {
+	background-color: var(--color-heading);
+	bottom: 0;
+	content: "";
+	height: 1px;
+	left: 10%;
+	position: absolute;
+	right: 10%;
+}

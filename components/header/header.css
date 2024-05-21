@@ -1,13 +1,12 @@
 :root {
 	--color-header-stripe-border: #281868;
-	--color-header-text: #fff;
 }
 
 .header {
 	align-items: center;
 	background-image: url(./assets/hero-bg-bottom.png);
 	background-repeat: repeat-x;
-	color: var(--color-header-text);
+	color: var(--color-heading);
 	display: flex;
 	min-height: 30rem; /* 480px */
 	position: relative;
@@ -27,14 +26,14 @@
 }
 
 .header-stripe-text {
-	max-width: 45rem; /* 72px */
+	max-width: var(--max-width-content);
 	padding-left: var(--spacing-medium);
 	position: relative;
 	width: 100%;
 }
 
 .header-stripe-text::before {
-	background-color: #fff;
+	background-color: var(--color-heading);
 	bottom: 10%;
 	content: "";
 	left: 0;
