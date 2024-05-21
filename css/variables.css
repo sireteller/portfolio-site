@@ -10,7 +10,6 @@
 	--color-general-border: #cfd7de;
 
 	--color-general-text: #180e34;
-	--color-header-text: #fff;
 	--color-options-text-primary: #faf8ed;
 	--color-options-text-secondary: #41701c;
 
@@ -33,7 +32,6 @@
 	--border-form: 1px solid var(--color-general-border);
 
 	--box-shadow-general: 8px 0px 15px 0px #00000040, -8px 0px 15px 0px #00000040;
-	--box-shadow-nav: 0px 2px 15px 0px #93abce;
 
 	--font-family-primary: "Raleway", sans-serif;
 	--font-family-secondary: "Philosopher", sans-serif;
@@ -47,18 +45,19 @@
 
 	--font-weight-regular: 400;
 
-	--spacing-medium: 1.5rem;
+	--spacing-medium: 1rem;
+	--spacing-large: 1.5rem;
 }
 
 /* 720px */
-@media only screen and (max-width: 45rem) {
+@media only screen and (max-width: 45em) {
 	:root {
 		--font-size-x-large: 3rem; /* 48px */
 	}
 }
 
 /* 480px */
-@media only screen and (max-width: 30rem) {
+@media only screen and (max-width: 30em) {
 	:root {
 		--font-size-x-large: 2.5rem; /* 40px */
 	}
