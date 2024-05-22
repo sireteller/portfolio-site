@@ -54,7 +54,8 @@
 }
 
 .header-img-overlay {
-	bottom: -25%;
+	bottom: -15%;
+	max-height: 80%;
 	position: absolute;
 	right: 0;
 	z-index: 2;
@@ -69,20 +70,6 @@
 	right: 0;
 	top: 0;
 	z-index: 0;
-}
-
-/* 864px */
-@media only screen and (max-width: 54em) {
-	.header-img-overlay {
-		bottom: -30%;
-	}
-}
-
-/* 640px */
-@media only screen and (max-width: 40em) {
-	.header-img-overlay {
-		bottom: -20%;
-	}
 }
 
 /* 480px */

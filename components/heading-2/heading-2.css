@@ -19,6 +19,7 @@
 .heading-2-text {
 	max-width: var(--max-width-content);
 	position: relative;
+	text-align: center;
 }
 
 .heading-2-text::after {

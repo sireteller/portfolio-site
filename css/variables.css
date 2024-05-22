@@ -1,6 +1,6 @@
 :root {
-	--color-general-bg-primary: #f9f8fb;
-	--color-general-bg-secondary: #eff5f9;
+	--color-general-bg-primary: #181D2D;
+	--color-general-bg-secondary: #141621;
 	--color-accent-bg: #382680;
 	--color-arrow-btn-bg: #180e3480;
 	--color-arrow-btn-bg--active: var(--color-general-text);
