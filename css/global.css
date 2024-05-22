@@ -2,3 +2,22 @@ body {
 	background: url("../resources/images/bg-pattern.png");
 	background-color: var(--color-general-bg-secondary);
 }
+
+p {
+	color: var(--color-text-general);
+	font-family: var(--font-family-primary);
+	font-size: var(--font-size-medium);
+}
+
+.container {
+	background-color: var(--color-general-bg-primary);
+	box-shadow: var(--box-shadow-general);
+	margin: 0 auto;
+	position: relative;
+	padding: var(--spacing-large);
+	z-index: 0;
+}
+
+.container.container--small {
+	max-width: var(--max-width-content);
+}

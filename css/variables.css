@@ -1,18 +1,13 @@
 :root {
-	--color-general-bg-primary: #181D2D;
+	--color-general-bg-primary: #181d2d;
 	--color-general-bg-secondary: #141621;
 	--color-accent-bg: #382680;
 	--color-arrow-btn-bg: #180e3480;
 	--color-arrow-btn-bg--active: var(--color-general-text);
 	--color-arrow-btn: var(--color-general-bg-secondary);
 
-	--color-button-border: #ba9840;
-	--color-general-border: #cfd7de;
-
-	--color-general-text: #180e34;
+	--color-text-general: #f9f8fb;
 	--color-heading: #fff;
-	--color-options-text-primary: #faf8ed;
-	--color-options-text-secondary: #41701c;
 
 	--gradient-button: conic-gradient(
 		from 45deg at 50% 50%,
@@ -21,9 +16,6 @@
 		#f4ef76 360deg
 	);
 	--gradient-showcase-bg: linear-gradient(180deg, #180e3400 0%, #180e347d 100%);
-
-	--border-button: 1px solid var(--color-button-border);
-	--border-form: 1px solid var(--color-general-border);
 
 	--box-shadow-general: 8px 0px 15px 0px #00000040, -8px 0px 15px 0px #00000040;
 
@@ -40,8 +32,8 @@
 	--font-weight-regular: 400;
 	--font-weight-bold: 700;
 
-	--spacing-medium: 1rem;
-	--spacing-large: 1.5rem;
+	--spacing-medium: 1rem; /* 16px */
+	--spacing-large: 1.5rem; /* 24px */
 
 	--max-width-content: 45rem; /* 720px */
 }
