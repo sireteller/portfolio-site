@@ -1,0 +1,51 @@
+.switcheroo {
+	height: 20rem;
+	overflow: hidden;
+	position: relative;
+}
+
+.switcheroo-resizer {
+	border-right: 1px solid var(--color-text-general);
+	height: 100%;
+	max-width: 100%;
+	overflow: hidden;
+	position: relative;
+	resize: horizontal;
+	z-index: 1;
+}
+
+.switcheroo-resizer::-webkit-resizer {
+	background-color: var(--color-text-general);
+	border-radius: 100% 0 0 100%;
+}
+
+.switcheroo-top-img {
+	background-color: var(--color-general-bg-primary);
+	height: 100%;
+	padding-left: 1.5rem;
+	/* Basically a random width that's definitely larger than the resizer.
+       That must be the case for overflow: hidden to cut off the image
+       when resizing. */
+	width: var(--max-width-content);
+}
+
+.switcheroo-top-img img {
+	height: 100%;
+}
+
+.switcheroo-bottom-img {
+	height: 100%;
+	left: 0;
+	padding-left: 1.5rem;
+	position: absolute;
+	top: 0;
+	/* Basically a random width that's definitely larger than the resizer.
+       That must be the case for overflow: hidden to cut off the image
+       when resizing. */
+	width: var(--max-width-content);
+	z-index: 0;
+}
+
+.switcheroo-bottom-img img {
+	height: 100%;
+}
