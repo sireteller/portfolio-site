@@ -21,3 +21,13 @@ p {
 .container.container--small {
 	max-width: var(--max-width-content);
 }
+
+.grid-duo {
+	display: grid;
+	gap: var(--spacing-medium);
+	grid-template: 1fr / repeat(2, 1fr);
+}
+
+.grid-duo > * {
+	width: 100%;
+}

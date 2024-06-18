@@ -1,28 +1,22 @@
-:root {
-	--color-header-stripe-border: #281868;
-}
-
 .header {
 	align-items: center;
-	background-image: url(./assets/hero-bg-bottom.png);
-	background-repeat: repeat-x;
+	background-color: var(--color-general-bg-primary);
 	color: var(--color-heading);
 	display: flex;
-	min-height: 30rem; /* 480px */
+	min-height: 15rem;
+	padding: 0 var(--spacing-large);
 	position: relative;
 }
 
 .header-stripe {
-	background-color: var(--color-accent-bg);
-	border-bottom: 2px solid var(--color-header-stripe-border);
-	border-top: 2px solid var(--color-header-stripe-border);
-	box-shadow: 0 0 20px #000000ce;
-	display: flex;
-	justify-content: center;
-	padding: var(--spacing-large);
+	height: 100%;
+	margin: 0 auto;
+	max-width: var(--max-width-content);
+	min-height: 15rem;
+	padding: var(--spacing-x-large) 0;
 	position: relative;
 	width: 100%;
-	z-index: 1;
+	z-index: 2;
 }
 
 .header-stripe-text {
@@ -55,26 +49,15 @@
 
 .header-img-overlay {
 	bottom: -15%;
-	max-height: 80%;
+	max-height: 100%;
 	position: absolute;
 	right: 0;
 	z-index: 2;
 }
 
-.header-frost-overlay {
-	backdrop-filter: blur(2px);
-	background-color: #00000055;
-	bottom: 0;
-	left: 0;
-	position: absolute;
-	right: 0;
-	top: 0;
-	z-index: 0;
-}
-
 /* 480px */
 @media only screen and (max-width: 30em) {
 	.header-img-overlay {
-		bottom: -10%;
+		max-height: 80%;
 	}
 }
