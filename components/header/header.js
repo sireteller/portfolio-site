@@ -1,6 +1,9 @@
 class SweetHeader extends HTMLElement {
 	constructor() {
 		super();
+	}
+
+	connectedCallback() {
 		this.innerHTML = `
         <header class="header">
 			<div class="header-stripe">
@@ -14,6 +17,4 @@ class SweetHeader extends HTMLElement {
 	}
 }
 
-if ("customElements" in window) {
-	customElements.define("sweet-header", SweetHeader);
-}
+customElements.define("sweet-header", SweetHeader);

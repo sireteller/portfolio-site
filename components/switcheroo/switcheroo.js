@@ -1,6 +1,9 @@
 class SweetSwitcheroo extends HTMLElement {
 	constructor() {
 		super();
+	}
+
+	connectedCallback() {
 		this.innerHTML = `
         <div class="switcheroo">
             <div class="switcheroo-resizer">
@@ -13,9 +16,22 @@ class SweetSwitcheroo extends HTMLElement {
             </div>
         </div>
         `;
+
+		this.updateMaxWidth();
+		// TODO update width on window resize
 	}
+
+	updateMaxWidth = () => {
+		// TODO make these variables' scope the component, not this function
+		const parentEl = this.parentElement;
+		const resizerEl = this.querySelector(".switcheroo-resizer");
+
+		if (parentEl.className === "grid-duo") {
+			resizerEl.style.maxWidth = `${
+				parseFloat(window.getComputedStyle(parentEl).getPropertyValue("width")) / 2
+			}px`;
+		}
+	};
 }
 
-if ("customElements" in window) {
-	customElements.define("sweet-switcheroo", SweetSwitcheroo);
-}
+customElements.define("sweet-switcheroo", SweetSwitcheroo);

@@ -1,6 +1,9 @@
 class SweetHeading2 extends HTMLElement {
 	constructor() {
 		super();
+	}
+
+    connectedCallback() {
 		this.attachShadow({ mode: "open" });
 		this.shadowRoot.innerHTML = `
         <style>@import url("./css/index.css");</style>
@@ -10,9 +13,7 @@ class SweetHeading2 extends HTMLElement {
                 <slot/>
             </span>
         </h2>`;
-	}
+    }
 }
 
-if ("customElements" in window) {
-	customElements.define("sweet-heading-2", SweetHeading2);
-}
+customElements.define("sweet-heading-2", SweetHeading2);
