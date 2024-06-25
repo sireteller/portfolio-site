@@ -1,6 +1,6 @@
 .header {
 	align-items: center;
-	background-color: var(--color-general-bg-primary);
+	background-color: var(--color-general-bg-secondary);
 	color: var(--color-heading);
 	display: flex;
 	min-height: 15rem;

@@ -32,6 +32,7 @@
 	--font-weight-regular: 400;
 	--font-weight-bold: 700;
 
+	--spacing-small: 0.5rem; /* 8px */
 	--spacing-medium: 1rem; /* 16px */
 	--spacing-large: 1.5rem; /* 24px */
 	--spacing-x-large: 2rem; /* 32px */
