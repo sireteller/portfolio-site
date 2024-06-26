@@ -52,3 +52,21 @@
 .switcheroo-bottom-img img {
 	height: 100%;
 }
+
+@keyframes sneak-peek {
+	from {
+		width: 100%;
+	}
+
+	50% {
+		width: 40%;
+	}
+
+	60% {
+		width: 40%;
+	}
+
+	to {
+		width: 100%;
+	}
+}

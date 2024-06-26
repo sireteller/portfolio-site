@@ -1,5 +1,6 @@
 let parentEl;
 let resizerEl;
+let windowHasScrollListener;
 
 class SweetSwitcheroo extends HTMLElement {
 	constructor() {
@@ -24,8 +25,14 @@ class SweetSwitcheroo extends HTMLElement {
 		resizerEl = this.querySelector(".switcheroo-resizer");
 
 		this.updateMaxWidth();
-
 		window.addEventListener("resize", this.updateMaxWidth);
+
+		if (resizerEl.getBoundingClientRect().bottom <= window.innerHeight) {
+			this.animate();
+		} else {
+			window.addEventListener("scroll", this.animate);
+			windowHasScrollListener = true;
+		}
 	}
 
 	updateMaxWidth = () => {
@@ -38,6 +45,15 @@ class SweetSwitcheroo extends HTMLElement {
 					  parseFloat(parentCompStyle.getPropertyValue("gap"))
 					: parseFloat(parentCompStyle.getPropertyValue("width"))
 			}px`;
+		}
+	};
+
+	animate = () => {
+		if (resizerEl.getBoundingClientRect().bottom <= window.innerHeight) {
+			resizerEl.style.animation = "2000ms 1 100ms normal sneak-peek";
+
+			window.removeEventListener("scroll", this.animate);
+			windowHasScrollListener = false;
 		}
 	};
 }
