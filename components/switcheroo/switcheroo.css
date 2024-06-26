@@ -25,7 +25,7 @@
 .switcheroo-top-img {
 	background-color: var(--color-general-bg-primary);
 	height: 100%;
-	padding-left: 1.5rem;
+	padding: 5px 0 5px 24px;
 	/* Basically a random width that's definitely larger than the resizer.
        That must be the case for overflow: hidden to cut off the image
        when resizing. */
@@ -33,13 +33,14 @@
 }
 
 .switcheroo-top-img img {
+	animation: 3000ms linear infinite idle;
 	height: 100%;
 }
 
 .switcheroo-bottom-img {
 	height: 100%;
 	left: 0;
-	padding-left: 1.5rem;
+	padding: 5px 0 5px 24px;
 	position: absolute;
 	top: 0;
 	/* Basically a random width that's definitely larger than the resizer.
@@ -50,6 +51,7 @@
 }
 
 .switcheroo-bottom-img img {
+	animation: 3000ms linear infinite idle;
 	height: 100%;
 }
 
@@ -68,5 +70,27 @@
 
 	to {
 		width: 100%;
+	}
+}
+
+@keyframes idle {
+	from {
+		transform: translateY(0) rotate(0);
+	}
+
+	25% {
+		transform: translateY(3px) rotate(-0.5deg);
+	}
+
+	50% {
+		transform: translateY(0) rotate(0);
+	}
+
+	75% {
+		transform: translateY(-3px) rotate(0);
+	}
+
+	to {
+		transform: translateY(0) rotate(0);
 	}
 }
