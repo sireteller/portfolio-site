@@ -1,3 +1,6 @@
+let parentEl;
+let resizerEl;
+
 class SweetSwitcheroo extends HTMLElement {
 	constructor() {
 		super();
@@ -17,18 +20,23 @@ class SweetSwitcheroo extends HTMLElement {
         </div>
         `;
 
+		parentEl = this.parentElement;
+		resizerEl = this.querySelector(".switcheroo-resizer");
+
 		this.updateMaxWidth();
-		// TODO update width on window resize
+
+		window.addEventListener("resize", this.updateMaxWidth);
 	}
 
 	updateMaxWidth = () => {
-		// TODO make these variables' scope the component, not this function
-		const parentEl = this.parentElement;
-		const resizerEl = this.querySelector(".switcheroo-resizer");
-
 		if (parentEl.className === "grid-duo") {
+			const parentCompStyle = window.getComputedStyle(parentEl);
+
 			resizerEl.style.maxWidth = `${
-				parseFloat(window.getComputedStyle(parentEl).getPropertyValue("width")) / 2
+				document.documentElement.clientWidth > 720
+					? parseFloat(parentCompStyle.getPropertyValue("width")) / 2 -
+					  parseFloat(parentCompStyle.getPropertyValue("gap"))
+					: parseFloat(parentCompStyle.getPropertyValue("width"))
 			}px`;
 		}
 	};

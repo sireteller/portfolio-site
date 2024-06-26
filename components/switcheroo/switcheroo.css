@@ -1,5 +1,8 @@
 .switcheroo {
-	height: 20rem;
+	/* Kind of an arbitrary height, because height 100% lets the image run too wild. 
+	  Deliberately in px to avoid resizing on text zoom - it's very tricky to account
+	  for in js. */
+	height: 400px;
 	overflow: hidden;
 	position: relative;
 }
