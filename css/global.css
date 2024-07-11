@@ -3,6 +3,12 @@ body {
 	background-color: var(--color-general-bg-secondary);
 }
 
+a {
+	color: var(--color-link);
+	font-family: var(--font-family-primary);
+	font-size: var(--font-size-medium);
+}
+
 p {
 	color: var(--color-text-general);
 	font-family: var(--font-family-primary);
@@ -10,17 +16,36 @@ p {
 	margin-bottom: var(--spacing-medium);
 }
 
+ul {
+	color: var(--color-text-general);
+	list-style: circle inside url("../resources/images/list-icon.png");
+	padding: 0;
+}
+
+ul li:not(:last-child) {
+	margin-bottom: var(--spacing-small);
+}
+
+footer {
+	background-color: var(--color-accent-bg);
+	position: relative;
+	z-index: 1;
+}
+
+footer > * {
+	margin: 0 auto;
+	max-width: var(--max-width-content);
+	padding: var(--spacing-large);
+}
+
 .container {
 	background-color: var(--color-general-bg-primary);
 	box-shadow: var(--box-shadow-general);
 	margin: 0 auto;
+	max-width: var(--max-width-content);
 	position: relative;
 	padding: var(--spacing-large);
 	z-index: 0;
-}
-
-.container.container--small {
-	max-width: var(--max-width-content);
 }
 
 .grid-duo {
