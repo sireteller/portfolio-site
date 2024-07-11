@@ -50,7 +50,7 @@ class SweetSwitcheroo extends HTMLElement {
 
 	animate = () => {
 		if (resizerEl.getBoundingClientRect().bottom <= window.innerHeight) {
-			resizerEl.style.animation = "2000ms 1 100ms normal sneak-peek";
+			resizerEl.style.animation = "2500ms 1 100ms normal sneak-peek";
 
 			window.removeEventListener("scroll", this.animate);
 			windowHasScrollListener = false;

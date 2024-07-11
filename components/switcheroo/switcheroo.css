@@ -1,3 +1,7 @@
+:root {
+	--animation-preset-idle: 3000ms linear infinite idle;
+}
+
 .switcheroo {
 	/* Kind of an arbitrary height, because height 100% lets the image run too wild. 
 	  Deliberately in px to avoid resizing on text zoom - it's very tricky to account
@@ -32,8 +36,9 @@
 	width: var(--max-width-content);
 }
 
+.switcheroo-bottom-img img,
 .switcheroo-top-img img {
-	animation: 3000ms linear infinite idle;
+	animation: var(--animation-preset-idle);
 	height: 100%;
 }
 
@@ -50,21 +55,16 @@
 	z-index: 0;
 }
 
-.switcheroo-bottom-img img {
-	animation: 3000ms linear infinite idle;
-	height: 100%;
-}
-
 @keyframes sneak-peek {
 	from {
 		width: 100%;
 	}
 
-	50% {
+	45% {
 		width: 40%;
 	}
 
-	60% {
+	55% {
 		width: 40%;
 	}
 
@@ -79,7 +79,11 @@
 	}
 
 	25% {
-		transform: translateY(3px) rotate(-0.5deg);
+		transform: translateY(3px) rotate(-0.5deg) translateX(1px);
+	}
+
+	30% {
+		transform: translateY(3px) rotate(-0.5deg) translateX(1px);
 	}
 
 	50% {
@@ -87,7 +91,11 @@
 	}
 
 	75% {
-		transform: translateY(-3px) rotate(0);
+		transform: translateY(-3px) translateX(-1px) rotate(0.25deg);
+	}
+
+	80% {
+		transform: translateY(-3px) rotate(0.25deg) translateX(-1px);
 	}
 
 	to {
