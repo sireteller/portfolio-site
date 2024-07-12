@@ -7,6 +7,22 @@ a {
 	color: var(--color-link);
 	font-family: var(--font-family-primary);
 	font-size: var(--font-size-medium);
+	position: relative;
+	text-underline-offset: 0.4em;
+}
+
+a::after {
+	content: "";
+	position: absolute;
+	bottom: -0.2em;
+	left: 0;
+	width: 0;
+	height: 1px;
+	background-color: var(--color-accent-bg);
+}
+
+a:hover::after {
+	animation: 500ms ease 1 link-hover-after;
 }
 
 p {
@@ -57,6 +73,23 @@ footer > * {
 .grid-duo > * {
 	height: 100%;
 	width: 100%;
+}
+
+@keyframes link-hover-after {
+	from {
+		left: 0;
+		width: 0;
+	}
+
+	50% {
+		left: 0;
+		width: 100%;
+	}
+
+	to {
+		left: 100%;
+		width: 100%;
+	}
 }
 
 /* 720px */
