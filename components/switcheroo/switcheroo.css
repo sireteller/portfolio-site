@@ -11,22 +11,43 @@
 	position: relative;
 }
 
-.switcheroo-resizer {
+.switcheroo__dragger {
+	align-items: center;
+	background-color: transparent;
+	border: 0;
+	cursor: grab;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	width: 24px;
+	z-index: 3;
+}
+
+.switcheroo__dragger:active {
+	cursor: grabbing;
+}
+
+.switcheroo__resizer {
 	border-right: 1px solid var(--color-text-general);
 	height: 100%;
 	max-width: 100%;
 	overflow: hidden;
 	position: relative;
-	resize: horizontal;
 	z-index: 1;
 }
 
-.switcheroo-resizer::-webkit-resizer {
-	background-color: var(--color-text-general);
-	border-radius: 100% 0 0 100%;
+.switcheroo__resizer::after {
+	content: url("./assets/handle.png");
+	position: absolute;
+	/* The lilac is 32 x 32, hence the 16px offset to center it */
+	right: -16px;
+	top: calc(50% - 16px);
 }
 
-.switcheroo-top-img {
+.switcheroo__top-img {
 	background-color: var(--color-general-bg-primary);
 	height: 100%;
 	padding: 5px 0 5px 24px;
@@ -36,13 +57,13 @@
 	width: var(--max-width-content);
 }
 
-.switcheroo-bottom-img img,
-.switcheroo-top-img img {
+.switcheroo__bottom-img img,
+.switcheroo__top-img img {
 	animation: var(--animation-preset-idle);
 	height: 100%;
 }
 
-.switcheroo-bottom-img {
+.switcheroo__bottom-img {
 	height: 100%;
 	left: 0;
 	padding: 5px 0 5px 24px;

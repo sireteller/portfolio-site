@@ -12,13 +12,13 @@ a {
 }
 
 a::after {
-	content: "";
-	position: absolute;
-	bottom: -0.2em;
-	left: 0;
-	width: 0;
-	height: 1px;
 	background-color: var(--color-accent-bg);
+	bottom: -0.2em;
+	content: "";
+	height: 1px;
+	left: 0;
+	position: absolute;
+	width: 0;
 }
 
 a:hover::after {
