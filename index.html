@@ -17,6 +17,7 @@
 		/>
 
 		<script src="https://kit.fontawesome.com/28e55809cd.js" crossorigin="anonymous"></script>
+		<script src="./components/carousel-showcase/carousel-showcase.js" defer></script>
 		<script src="./components/header/header.js" defer></script>
 		<script src="./components/heading-2/heading-2.js" defer></script>
 		<script src="./components/heading-3/heading-3.js" defer></script>
@@ -26,7 +27,7 @@
 	</head>
 	<body>
 		<sweet-header></sweet-header>
-		<sweet-heading-2>About me</sweet-heading-2>
+		<sweet-heading-2>About Me</sweet-heading-2>
 		<div class="container">
 			<div class="grid-duo">
 				<sweet-switcheroo></sweet-switcheroo>
@@ -51,33 +52,57 @@
 			</div>
 		</div>
 
-		<sweet-heading-2>Best works</sweet-heading-2>
+		<sweet-heading-2>Best Works</sweet-heading-2>
 		<div class="container container--no-padding">
-			<div class="grid-duo grid-duo--no-gap">
-				<div>
-					<sweet-heading-3>Webwork</sweet-heading-3>
+			<sweet-carousel-showcase>
+				<sweet-heading-3 slot="title">Webwork</sweet-heading-3>
+				<p slot="intro">
+					Here are some of my personal projects in front-end development. While at work I
+					currently use StencilJS, TypeScript and PostCSS, in my personal time I mostly
+					like to fiddle around with vanilla HTML, CSS and JavaScript. A better
+					understanding of vanilla leads to a better understanding of frameworks down the
+					road.
+				</p>
+				<h4 slot="work-title">Portfolio Site</h4>
+				<div slot="work-desc">
 					<p>
-						Here are some of my personal projects in front-end development. While at
-						work I currently use StencilJS, TypeScript and PostCSS, in my personal time
-						I mostly like to fiddle around with vanilla HTML, CSS and JavaScript. A
-						better understanding of vanilla leads to a better understanding of
-						frameworks down the road.
+						Static site built with vanilla HTML, CSS & JS, featuring sweet vanilla web
+						components, fun keyframe animations and lots of lilacs. All image assets
+						(aside from the photograph of me) were drawn by me.
 					</p>
+					<p>Upcoming features include:</p>
+					<ul>
+						<li>an est/eng language switcher</li>
+						<li>a light/dark theme switcher</li>
+						<li>an option to pause all animations</li>
+						<li>and more!</li>
+					</ul>
+					<p>Also have a look at the relevant:</p>
+					<ul>
+						<li>
+							<a href="https://github.com/sireteller/portfolio-site">
+								Github repository
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://www.figma.com/design/qWZ5w6Fu4sDudUDlGrix9V/Portfolio-project?node-id=410-5&t=sAtB4I0ZTbEJIVpU-1"
+							>
+								Figma file.
+							</a>
+						</li>
+					</ul>
 				</div>
-				<div></div>
-			</div>
-			<div class="grid-duo grid-duo--no-gap">
-				<div></div>
-				<div><sweet-heading-3>Artwork</sweet-heading-3></div>
-			</div>
+				<div slot="slide"><strong>You are here!</strong></div>
+			</sweet-carousel-showcase>
 		</div>
 
 		<footer>
 			<div class="grid-duo">
 				<div>
 					<p>
-						Well, this is the end of the page now. If you would like to see more of me
-						or start a conversation, here are some useful links!
+						Well, this is the end of the page (for) now. If you would like to see more
+						of me or start a conversation, here are some useful links!
 					</p>
 				</div>
 				<div>

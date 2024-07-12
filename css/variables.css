@@ -2,21 +2,10 @@
 	--color-general-bg-primary: #181d2d;
 	--color-general-bg-secondary: #141621;
 	--color-accent-bg: #382680;
-	--color-arrow-btn-bg: #180e3480;
-	--color-arrow-btn-bg--active: var(--color-general-text);
-	--color-arrow-btn: var(--color-general-bg-secondary);
 
 	--color-text-general: #f9f8fb;
 	--color-heading: #fff;
 	--color-link: #f5c95c;
-
-	--gradient-button: conic-gradient(
-		from 45deg at 50% 50%,
-		#eec048 0deg,
-		#eec048 0.04deg,
-		#f4ef76 360deg
-	);
-	--gradient-showcase-bg: linear-gradient(180deg, #180e3400 0%, #180e347d 100%);
 
 	--box-shadow-general: 8px 0px 15px 0px #00000040, -8px 0px 15px 0px #00000040;
 

@@ -1,0 +1,23 @@
+.carousel-showcase__info-side-inner {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-medium);
+	padding: var(--spacing-large);
+}
+
+.carousel-showcase__details {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-large);
+}
+
+.carousel-showcase__carousel-side {
+	align-items: center;
+	background: linear-gradient(180deg, #180e3400 0%, #d4bcff60 100%);
+	display: flex;
+	justify-content: center;
+	min-height: 200px;
+	padding: var(--spacing-large);
+}
