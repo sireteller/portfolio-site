@@ -34,7 +34,10 @@ class SweetSwitcheroo extends HTMLElement {
 		window.addEventListener("resize", this.updateMaxWidth);
 
 		draggerEl.style.display = "none";
-		if (resizerEl.getBoundingClientRect().bottom <= window.innerHeight) {
+		if (
+			resizerEl.getBoundingClientRect().bottom <= window.innerHeight &&
+			resizerEl.getBoundingClientRect().top >= 0
+		) {
 			this.animate();
 		} else {
 			window.addEventListener("scroll", this.animate, { signal: scrollListener.signal });
@@ -55,7 +58,10 @@ class SweetSwitcheroo extends HTMLElement {
 	};
 
 	animate = () => {
-		if (resizerEl.getBoundingClientRect().bottom <= window.innerHeight) {
+		if (
+			resizerEl.getBoundingClientRect().bottom <= window.innerHeight &&
+			resizerEl.getBoundingClientRect().top >= 0
+		) {
 			resizerEl.style.animation = "2500ms 1 100ms normal sneak-peek";
 
 			scrollListener.abort();
