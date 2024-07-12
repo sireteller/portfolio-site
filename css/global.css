@@ -16,7 +16,7 @@ a::after {
 	bottom: -0.2em;
 	content: "";
 	height: 1px;
-	left: 0;
+	left: -1px;
 	position: absolute;
 	width: 0;
 }
@@ -77,12 +77,12 @@ footer > * {
 
 @keyframes link-hover-after {
 	from {
-		left: 0;
+		left: -1px;
 		width: 0;
 	}
 
 	50% {
-		left: 0;
+		left: -1px;
 		width: 100%;
 	}
 

@@ -17,11 +17,11 @@ class SweetSwitcheroo extends HTMLElement {
 			<button class="switcheroo__dragger" aria-label="Drag me"></button>
             <div class="switcheroo__resizer">
                 <div class="switcheroo__top-img">
-                    <img src="./components/switcheroo/assets/intro-image__drawing.png" alt="A cartoony illustration of me"/>
+                    <img src="./components/switcheroo/assets/intro-image__drawing.png" alt="A cartoony illustration of me" draggable="false" />
                 </div>
             </div>
             <div class="switcheroo__bottom-img">
-                <img src="./components/switcheroo/assets/intro-image__photo.png" alt="A photograph of me"/>
+                <img src="./components/switcheroo/assets/intro-image__photo.png" alt="A photograph of me" draggable="false" />
             </div>
         </div>
         `;
@@ -33,7 +33,7 @@ class SweetSwitcheroo extends HTMLElement {
 		this.updateMaxWidth();
 		window.addEventListener("resize", this.updateMaxWidth);
 
-		draggerEl.style.visibility = "hidden";
+		draggerEl.style.display = "none";
 		if (resizerEl.getBoundingClientRect().bottom <= window.innerHeight) {
 			this.animate();
 		} else {
@@ -65,7 +65,7 @@ class SweetSwitcheroo extends HTMLElement {
 	};
 
 	setUpResizing = () => {
-		draggerEl.style.visibility = "visible";
+		draggerEl.style.display = "unset";
 
 		/* Pointer events were recommended on MDN here https://developer.mozilla.org/en-US/docs/Web/API/Touch_events#:~:text=To%20support%20both%20touch%20and%20mouse%20across%20all%20types%20of%20devices%2C%20use%20pointer%20events%20instead.
 		   Supposedly it should support both mouse and touch, but it's super messy on mobile. 
