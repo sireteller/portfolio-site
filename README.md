@@ -1,10 +1,14 @@
 # Portfolio page
 
-Originally built with vanilla html, css and javascript and a little bit of php for a form.
+Static site built with vanilla HTML, CSS & JS, featuring sweet vanilla web components, fun keyframe animations and lots of lilacs. All image assets (aside from the photograph of me) were drawn by me.
 
-Currently still working with vanilla html, css and javascript, but considering branching out
-to web components and Angular and looking into other options for forms.
+Upcoming features include:
 
-Working on a redesign in Figma - https://www.figma.com/file/qWZ5w6Fu4sDudUDlGrix9V/Portfolio-project?type=design&node-id=0%3A1&mode=design&t=7qhveR4nrfiHAbdX-1
+-   an est/eng language switcher
+-   a light/dark theme switcher
+-   an option to pause all animations
+-   the return of "Where's Miko"
+-   artwork display
+-   and more!
 
-Originally hosted on a Raspberry Pi, switched to Github Pages for convenience.
+Also have a look at the relevant [figma file](https://www.figma.com/design/qWZ5w6Fu4sDudUDlGrix9V/Portfolio-project?node-id=410-5&t=sAtB4I0ZTbEJIVpU-1) to see this site's design progress through time. Because I am primarily a developer, not UX designer, the final Figma isn't 100% the same as the coded end result; I found it easier to make tweaks through CSS than to rework the design file.

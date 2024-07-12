@@ -1,0 +1,146 @@
+:root {
+	--color-bg-link-after: var(--color-general-bg-primary);
+}
+
+*::selection {
+	background-color: #7c63d4;
+}
+
+body {
+	background: url("../resources/images/bg-pattern.png");
+	background-color: var(--color-general-bg-secondary);
+	color: var(--color-text-general);
+	font-family: var(--font-family-primary);
+	font-size: var(--font-size-medium);
+}
+
+a {
+	color: var(--color-link);
+	position: relative;
+	text-underline-offset: 0.4em;
+}
+
+a::after {
+	background-color: var(--color-bg-link-after);
+	bottom: -0.2em;
+	content: "";
+	height: 1px;
+	left: -1px;
+	position: absolute;
+	width: 0;
+}
+
+a:hover::after {
+	animation: 500ms ease 1 link-hover-after;
+}
+
+p {
+	margin-bottom: var(--spacing-medium);
+}
+
+h4 {
+	color: var(--color-heading);
+	font-family: var(--font-family-accent);
+	font-size: var(--font-size-large);
+	font-weight: var(--font-weight-regular);
+	position: relative;
+	text-align: center;
+}
+
+h4::after {
+	background-color: var(--color-heading);
+	bottom: 0;
+	content: "";
+	height: 1px;
+	left: 10%;
+	position: absolute;
+	right: 10%;
+}
+
+hr {
+	background-color: #363663;
+	border: none;
+	height: 1px;
+	width: 80%;
+}
+
+ul {
+	color: var(--color-text-general);
+	font-family: var(--font-family-primary);
+	font-size: var(--font-size-medium);
+	list-style: circle inside url("../resources/images/list-icon.png");
+	margin-bottom: var(--spacing-medium);
+	padding: 0;
+}
+
+ul li:not(:last-child) {
+	margin-bottom: var(--spacing-small);
+}
+
+footer {
+	--color-bg-link-after: var(--color-accent-bg);
+
+	background-color: var(--color-accent-bg);
+	position: relative;
+	z-index: 1;
+}
+
+footer > * {
+	margin: 0 auto;
+	max-width: var(--max-width-content);
+	padding: var(--spacing-large);
+}
+
+.container {
+	background-color: var(--color-general-bg-primary);
+	box-shadow: var(--box-shadow-general);
+	margin: 0 auto;
+	max-width: var(--max-width-content);
+	position: relative;
+	padding: var(--spacing-large);
+	z-index: 0;
+}
+
+.container.container--no-padding {
+	padding: 0;
+}
+
+.grid-duo {
+	display: grid;
+	gap: var(--spacing-medium);
+	grid-template: 1fr / repeat(2, 1fr);
+}
+
+.grid-duo.grid-duo--no-gap {
+	gap: 0;
+}
+
+.grid-duo > * {
+	height: 100%;
+	width: 100%;
+}
+
+@keyframes link-hover-after {
+	from {
+		left: -1px;
+		width: 0;
+	}
+
+	50% {
+		left: -1px;
+		width: 100%;
+	}
+
+	to {
+		left: 100%;
+		width: 100%;
+	}
+}
+
+/* 720px */
+@media only screen and (max-width: 45em) {
+	.grid-duo {
+		gap: var(--spacing-large);
+		grid-template: 1fr / 1fr;
+	}
+}
