@@ -7,7 +7,6 @@ Upcoming features include:
 -   an est/eng language switcher
 -   a light/dark theme switcher
 -   an option to pause all animations
--   the return of "Where's Miko"
 -   artwork display
 -   and more!
 
