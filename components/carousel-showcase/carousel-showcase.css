@@ -60,9 +60,21 @@
 }
 
 .carousel-showcase__arrows button {
-	cursor: pointer;
-	height: 32px;
-	width: 32px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 3.5rem;
+	width: 3.5rem;
+}
+
+/* TODO add onclick animation & hover animation */
+
+.carousel-showcase__arrow-left {
+	background-image: url(./assets/arrow-left.png);
+}
+
+.carousel-showcase__arrow-right {
+	background-image: url(./assets/arrow-right.png);
 }
 
 .carousel-showcase__slides {
