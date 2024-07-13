@@ -27,90 +27,92 @@
 
 	<body>
 		<sweet-header></sweet-header>
-		<sweet-heading-2>About Me</sweet-heading-2>
-		<div class="container">
-			<div class="grid-duo">
-				<sweet-switcheroo></sweet-switcheroo>
-				<div>
-					<p>Hiya, welcome!</p>
-					<p>
-						My name is Siret, I am a front-end developer based in Tartu, Estonia. More
-						specifically I am a front-of-the-front-end developer, meaning my expertise
-						is in making web pages beautiful and accessible, but I don't normally deal
-						with implementing business logic. HTML, CSS and presentational
-						JavaScript/TypeScript is where I thrive. If could not write CSS, I would be
-						very sad indeed; I love watching a page or component come together as I
-						build it.
-					</p>
-					<p>
-						Front-end development isn't all that's in my heart though, there is plenty
-						of room there for all things creative. On this page I have chosen to
-						showcase my art as well as my coding. I sincerely hope that you enjoy your
-						stay.
-					</p>
+		<main>
+			<sweet-heading-2>About Me</sweet-heading-2>
+			<div class="container">
+				<div class="grid-duo">
+					<sweet-switcheroo></sweet-switcheroo>
+					<div>
+						<p>Hiya, welcome!</p>
+						<p>
+							My name is Siret, I am a front-end developer based in Tartu, Estonia.
+							More specifically I am a front-of-the-front-end developer, meaning my
+							expertise is in making web pages beautiful and accessible, but I don't
+							normally deal with implementing business logic. HTML, CSS and
+							presentational JavaScript/TypeScript is where I thrive. If could not
+							write CSS, I would be very sad indeed; I love watching a page or
+							component come together as I build it.
+						</p>
+						<p>
+							Front-end development isn't all that's in my heart though, there is
+							plenty of room there for all things creative. On this page I have chosen
+							to showcase my art as well as my coding. I sincerely hope that you enjoy
+							your stay.
+						</p>
+					</div>
 				</div>
 			</div>
-		</div>
 
-		<sweet-heading-2>Best Works</sweet-heading-2>
-		<div class="container container--no-padding">
-			<sweet-carousel-showcase>
-				<sweet-heading-3 slot="title">Webwork</sweet-heading-3>
-				<p slot="intro">
-					Here are some of my personal projects in front-end development. While at work I
-					currently use StencilJS, TypeScript and PostCSS, in my personal time I mostly
-					like to fiddle around with vanilla HTML, CSS and JavaScript. A better
-					understanding of vanilla leads to a better understanding of frameworks down the
-					road.
-				</p>
-
-				<div slot="work-title"><h4>Portfolio Site</h4></div>
-				<div slot="work-desc">
-					<p>
-						Static site built with vanilla HTML, CSS & JS, featuring sweet vanilla web
-						components, fun keyframe animations and lots of lilacs. All image assets
-						(aside from the photograph of me) were drawn by me.
+			<sweet-heading-2>Best Works</sweet-heading-2>
+			<div class="container container--no-padding">
+				<sweet-carousel-showcase>
+					<sweet-heading-3 slot="title">Webwork</sweet-heading-3>
+					<p slot="intro">
+						Here are some of my personal projects in front-end development. While at
+						work I currently use StencilJS, TypeScript and PostCSS, in my personal time
+						I mostly like to fiddle around with vanilla HTML, CSS and JavaScript. A
+						better understanding of vanilla leads to a better understanding of
+						frameworks down the road.
 					</p>
-					<p>Upcoming features include:</p>
-					<ul>
-						<li>an artwork showcase</li>
-						<li>link to a silly little web game</li>
-						<li>a light/dark theme switcher</li>
-						<li>and more!</li>
-					</ul>
-					<p>Also have a look at the relevant:</p>
-					<ul>
-						<li>
-							<a href="https://github.com/sireteller/portfolio-site">
-								Github repository
-							</a>
-						</li>
-						<li>
-							<a
-								href="https://www.figma.com/design/qWZ5w6Fu4sDudUDlGrix9V/Portfolio-project?node-id=410-5&t=sAtB4I0ZTbEJIVpU-1"
-							>
-								Figma file.
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div slot="slide"><strong>You are here!</strong></div>
 
-				<div slot="work-title"><h4>Where's Miko?</h4></div>
-				<div slot="work-desc">
-					<p>
-						A "Where's Waldo?" type web game built with vanilla HTML, CSS & JS featuring
-						cunning shiba inu Miko. Chase him down through 5 levels of doggy hijinks!
-						Works best on desktop.
-					</p>
-					<ul>
-						<li><a href="/">Play the game!</a></li>
-						<li><a href="/">Visit the github repository.</a></li>
-					</ul>
-				</div>
-				<div slot="slide"><strong>Slide 2</strong></div>
-			</sweet-carousel-showcase>
-		</div>
+					<div slot="work-title"><h4>Portfolio Site</h4></div>
+					<div slot="work-desc">
+						<p>
+							Static site built with vanilla HTML, CSS & JS, featuring sweet vanilla
+							web components, fun keyframe animations and lots of lilacs. All image
+							assets (aside from the photograph of me) were drawn by me.
+						</p>
+						<p>Upcoming features include:</p>
+						<ul>
+							<li>an artwork showcase</li>
+							<li>link to a silly little web game</li>
+							<li>a light/dark theme switcher</li>
+							<li>and more!</li>
+						</ul>
+						<p>Also have a look at the relevant:</p>
+						<ul>
+							<li>
+								<a href="https://github.com/sireteller/portfolio-site">
+									Github repository
+								</a>
+							</li>
+							<li>
+								<a
+									href="https://www.figma.com/design/qWZ5w6Fu4sDudUDlGrix9V/Portfolio-project?node-id=410-5&t=sAtB4I0ZTbEJIVpU-1"
+								>
+									Figma file.
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div slot="slide"><strong>You are here!</strong></div>
+
+					<div slot="work-title"><h4>Where's Miko?</h4></div>
+					<div slot="work-desc">
+						<p>
+							A "Where's Waldo?" type web game built with vanilla HTML, CSS & JS
+							featuring cunning shiba inu Miko. Chase him down through 5 levels of
+							doggy hijinks! Works best on desktop.
+						</p>
+						<ul>
+							<li><a href="/">Play the game!</a></li>
+							<li><a href="/">Visit the github repository.</a></li>
+						</ul>
+					</div>
+					<div slot="slide"><strong>Slide 2</strong></div>
+				</sweet-carousel-showcase>
+			</div>
+		</main>
 
 		<footer>
 			<div class="grid-duo">
