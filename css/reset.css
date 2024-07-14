@@ -63,3 +63,11 @@ h6 {
 #__next {
 	isolation: isolate;
 }
+
+/* 9. Reset buttons */
+button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+}
