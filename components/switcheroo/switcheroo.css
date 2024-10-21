@@ -12,6 +12,7 @@
 }
 
 .switcheroo__dragger {
+	border-radius: 8px;
 	cursor: grab;
 	height: 100%;
 	position: absolute;
@@ -22,6 +23,10 @@
 
 .switcheroo__dragger:active {
 	cursor: grabbing;
+}
+
+.switcheroo__dragger:focus-visible {
+	outline-offset: -2px;
 }
 
 .switcheroo__resizer {
