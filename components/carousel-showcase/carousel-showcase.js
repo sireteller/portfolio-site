@@ -1,11 +1,14 @@
-let amountOfSlides;
-let arrowLeftBtn;
-let arrowRightBtn;
-let currentSlide = 1;
-
 class SweetCarouselShowcase extends HTMLElement {
 	constructor() {
 		super();
+
+		let amountOfSlides;
+		let arrowLeftBtn;
+		let arrowRightBtn;
+		let currentSlide;
+		let descriptions;
+		let images;
+		let titles;
 	}
 
 	// TODO attribute to flip sides
@@ -43,45 +46,71 @@ class SweetCarouselShowcase extends HTMLElement {
                 </div>
 			</div>`;
 
-		amountOfSlides = this.querySelectorAll("[slot=slide]").length;
+		this.currentSlide = 1;
+		this.descriptions = this.querySelectorAll("[slot=work-desc]");
+		this.images = this.querySelectorAll("[slot=slide]");
+		this.titles = this.querySelectorAll("[slot=work-title]");
 
-		this.style.setProperty("--carousel-showcase-amount-of-slides", amountOfSlides);
+		this.amountOfSlides = this.images.length;
 
-		arrowLeftBtn = this.shadowRoot.querySelector(".carousel-showcase__arrow-left");
-		arrowRightBtn = this.shadowRoot.querySelector(".carousel-showcase__arrow-right");
+		this.style.setProperty("--carousel-showcase-amount-of-slides", this.amountOfSlides);
+		this.setSlideStyles(this.descriptions);
+		this.setSlideStyles(this.titles);
+		this.setSlideStyles(this.images);
 
-		arrowLeftBtn.addEventListener("click", this.prevSlide);
-		arrowRightBtn.addEventListener("click", this.nextSlide);
+		this.arrowLeftBtn = this.shadowRoot.querySelector(".carousel-showcase__arrow-left");
+		this.arrowRightBtn = this.shadowRoot.querySelector(".carousel-showcase__arrow-right");
+
+		this.arrowLeftBtn.addEventListener("click", this.prevSlide);
+		this.arrowRightBtn.addEventListener("click", this.nextSlide);
 	}
 
 	prevSlide = () => {
 		let translatex;
 
-		/* Decutions all around because translatex 0 is the first slide
+		/* Deducutions all around because translatex 0 is the first slide
 		   and -100 is the second and so on. */
-		if (currentSlide === 1) {
-			translatex = (amountOfSlides - 1) * -100;
-			currentSlide = amountOfSlides;
+		if (this.currentSlide === 1) {
+			translatex = (this.amountOfSlides - 1) * -100;
+			this.currentSlide = this.amountOfSlides;
 		} else {
-			translatex = (currentSlide - 2) * 100;
-			currentSlide--;
+			translatex = (this.currentSlide - 2) * 100;
+			this.currentSlide--;
 		}
 
+		this.setSlideStyles(this.descriptions);
+		this.setSlideStyles(this.titles);
+		this.setSlideStyles(this.images);
 		this.style.setProperty("--carousel-showcase-translatex", `${translatex}%`);
 	};
 
 	nextSlide = () => {
 		let translatex;
 
-		if (currentSlide === amountOfSlides) {
+		if (this.currentSlide === this.amountOfSlides) {
 			translatex = 0;
-			currentSlide = 1;
+			this.currentSlide = 1;
 		} else {
-			translatex = currentSlide * -100;
-			currentSlide++;
+			translatex = this.currentSlide * -100;
+			this.currentSlide++;
 		}
 
+		this.setSlideStyles(this.descriptions);
+		this.setSlideStyles(this.titles);
+		this.setSlideStyles(this.images);
 		this.style.setProperty("--carousel-showcase-translatex", `${translatex}%`);
+	};
+
+	setSlideStyles = (array) => {
+		array.forEach((item, index) => {
+			if (index === this.currentSlide - 1) {
+				item.style.visibility = "visible";
+				item.style.opacity = "1";
+			} else {
+				item.style.visibility = "hidden";
+				item.style.opacity = "0";
+			}
+		});
 	};
 }
 
