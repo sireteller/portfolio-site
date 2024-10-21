@@ -5,8 +5,8 @@ class SweetSwitcheroo extends HTMLElement {
 		let draggerEl;
 		let parentEl;
 		let resizerEl;
-		let pointerMoveListener = new AbortController();
-		let scrollListener = new AbortController();
+		let pointerMoveListener;
+		let scrollListener;
 	}
 
 	connectedCallback() {
