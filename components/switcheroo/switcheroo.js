@@ -58,6 +58,9 @@ class SweetSwitcheroo extends HTMLElement {
 					: parseFloat(parentCompStyle.getPropertyValue("width"))
 			}px`;
 		}
+
+		this.resizerEl.style.removeProperty("width");
+		this.draggerEl.style.removeProperty("left");
 	};
 
 	animate = () => {
