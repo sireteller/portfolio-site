@@ -76,28 +76,54 @@ class SweetSwitcheroo extends HTMLElement {
 	setUpResizing = () => {
 		this.draggerEl.style.display = "unset";
 
-		/* Pointer events were recommended on MDN here https://developer.mozilla.org/en-US/docs/Web/API/Touch_events#:~:text=To%20support%20both%20touch%20and%20mouse%20across%20all%20types%20of%20devices%2C%20use%20pointer%20events%20instead.
-		   Supposedly it should support both mouse and touch, but it's super messy on mobile. 
-		   TODO Requires further research what I can do here to support mobile */
-		this.draggerEl.addEventListener("pointerdown", () => {
+		/* Exasperation, a haiku
+
+			I tried drag and drop.
+			I tried some pointer events.
+			Neither works for touch.
+		
+		Here's the simplest workaround I could think of. */
+
+		/* Mouse */
+
+		this.draggerEl.addEventListener("mousedown", () => {
 			this.pointerMoveListener = new AbortController();
 
-			document.addEventListener("pointermove", (event) => this.onPointerMove(event), {
-				signal: this.pointerMoveListener.signal,
-			});
+			document.addEventListener(
+				"mousemove",
+				(event) => {
+					this.resize(event.clientX - this.resizerEl.getBoundingClientRect().left);
+				},
+				{
+					signal: this.pointerMoveListener.signal,
+				}
+			);
 		});
 
-		document.addEventListener("pointerup", () => {
+		document.addEventListener("mouseup", () => {
 			this.pointerMoveListener.abort();
 		});
 
-		document.addEventListener("pointercancel", () => {
+		/* Touch */
+
+		this.draggerEl.addEventListener("touchstart", () => {
+			this.pointerMoveListener = new AbortController();
+			document.addEventListener(
+				"touchmove",
+				(event) => {
+					this.resize(
+						event.touches[0].clientX - this.resizerEl.getBoundingClientRect().left
+					);
+				},
+				{
+					signal: this.pointerMoveListener.signal,
+				}
+			);
+		});
+
+		document.addEventListener("touchend", () => {
 			this.pointerMoveListener.abort();
 		});
-	};
-
-	onPointerMove = (event) => {
-		this.resize(event.clientX - this.resizerEl.getBoundingClientRect().left);
 	};
 
 	resize = (newWidth) => {
@@ -112,7 +138,6 @@ class SweetSwitcheroo extends HTMLElement {
 			newWidth = 16;
 		}
 
-		console.log(newWidth);
 		this.resizerEl.style.width = `${newWidth}px`;
 		// The dragger is 24px wide, deducting 12 ensures that it's centered on the visible line.
 		this.draggerEl.style.left = `${newWidth - 12}px`;
