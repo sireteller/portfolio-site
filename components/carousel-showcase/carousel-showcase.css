@@ -1,90 +1,131 @@
 :host {
-	--carousel-showcase-amount-of-slides: 1;
-	--carousel-showcase-translatex: 0;
+    --carousel-showcase-amount-of-slides: 1;
+    --carousel-showcase-bg-gradient-end: #d4bcff60;
+    --carousel-showcase-bg-gradient-start: #180e3400;
+    --carousel-showcase-translatex: 0;
 }
 
 .carousel-showcase__info-side-inner {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	gap: var(--spacing-medium);
-	padding: var(--spacing-large);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-medium);
+    padding: var(--spacing-large);
 }
 
 .carousel-showcase__details {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	gap: var(--spacing-large);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-large);
 }
 
 .carousel-showcase__work-titles,
 .carousel-showcase__work-descs,
 .carousel-showcase__slides {
-	display: grid;
-	grid-template-rows: 1fr;
-	grid-template-columns: repeat(var(--carousel-showcase-amount-of-slides), 100%);
-	overflow: hidden;
-	width: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(var(--carousel-showcase-amount-of-slides), 100%);
+    overflow: hidden;
+    width: 100%;
 }
 
 .carousel-showcase__work-titles ::slotted(*),
 .carousel-showcase__work-descs ::slotted(*),
 .carousel-showcase__slides ::slotted(*) {
-	transform: translateX(var(--carousel-showcase-translatex));
-	transition: transform 200ms ease-in-out, opacity 200ms ease-out, visibility 200ms ease-out;
+    transform: translateX(var(--carousel-showcase-translatex));
+    transition: transform 200ms ease-in-out, opacity 200ms ease-out, visibility 200ms ease-out;
 }
 
 .carousel-showcase__work-titles ::slotted(*),
 .carousel-showcase__work-descs ::slotted(*) {
-	width: 100%;
+    width: 100%;
 }
 
 .carousel-showcase__work-titles ::slotted(*) {
-	display: flex;
-	justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .carousel-showcase__carousel-side {
-	background: linear-gradient(180deg, #180e3400 0%, #d4bcff60 100%);
-	display: flex;
-	flex-direction: column;
-	gap: var(--spacing-medium);
-	min-height: 200px;
-	padding: var(--spacing-large);
+    background: linear-gradient(180deg, var(--carousel-showcase-bg-gradient-start) 0%, #d4bcff60 100%);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-medium);
+    min-height: 200px;
+    padding: var(--spacing-large);
 }
 
 .carousel-showcase__arrows {
-	display: flex;
-	gap: var(--spacing-medium);
+    display: flex;
+    gap: var(--spacing-medium);
 }
 
 .carousel-showcase__arrows button {
-	background-color: transparent;
-	background-repeat: no-repeat;
-	background-size: contain;
-	border-radius: 100%;
-	height: 3.5rem;
-	width: 3.5rem;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 100%;
+    height: 3.5rem;
+    position: relative;
+    transition: transform 100ms ease-out;
+    width: 3.5rem;
 }
 
-/* TODO add onclick animation & hover animation */
+.carousel-showcase__arrows button:active {
+    transform: scale(0.9);
+}
+
+.carousel-showcase__arrows button::before {
+    background: radial-gradient(var(--carousel-showcase-bg-gradient-start) 0%, var(--carousel-showcase-bg-gradient-start) 20%, var(--carousel-showcase-bg-gradient-end) 30%, var(--carousel-showcase-bg-gradient-start) 40%, var(--carousel-showcase-bg-gradient-end) 70%, var(--carousel-showcase-bg-gradient-start) 80%, var(--carousel-showcase-bg-gradient-start) 100%);
+    border-radius: 100%;
+    content: "";
+    inset: -10%;
+    position: absolute;
+    transform: scale(0);
+    transition: transform 100ms ease-out;
+    z-index: -1;
+}
 
 .carousel-showcase__arrow-left {
-	background-image: url(./assets/arrow-left.png);
+    background-image: url(./assets/arrow-left.png);
 }
 
 .carousel-showcase__arrow-right {
-	background-image: url(./assets/arrow-right.png);
+    background-image: url(./assets/arrow-right.png);
 }
 
 .carousel-showcase__slides {
-	height: 100%;
+    height: 100%;
 }
 
 .carousel-showcase__slides ::slotted(*) {
-	align-items: center;
-	display: flex;
-	height: 100%;
-	justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+}
+
+@keyframes arrow-hover-before {
+    from {
+        opacity: 1;
+        transform: scale(0);
+    }
+
+    40% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+
+@media (any-hover: hover) {
+    .carousel-showcase__arrows button:hover::before {
+        transform: scale(1);
+        animation: arrow-hover-before infinite ease-out 1000ms;
+    }
 }
