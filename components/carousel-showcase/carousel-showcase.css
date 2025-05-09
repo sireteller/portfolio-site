@@ -65,23 +65,18 @@
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: contain;
+    border-bottom: 1px solid #fff;
     border-radius: 100%;
     height: 3.5rem;
     position: relative;
-    transition: transform 100ms ease-out;
     width: 3.5rem;
 }
 
-.carousel-showcase__arrows button:active {
-    transform: scale(0.9);
-}
-
 .carousel-showcase__arrows button::before {
-    background: transparent linear-gradient(transparent, var(--color-link));
+    background-color: #7a6309;
     border-radius: 100%;
     content: "";
     inset: 10%;
-    opacity: 0.5;
     position: absolute;
     transition: background-color 100ms ease-out, inset 100ms ease-out;
     z-index: -1;
@@ -89,10 +84,12 @@
 
 .carousel-showcase__arrow-left {
     background-image: url(./assets/arrow-left.png);
+    border-left: 1px solid #fff;
 }
 
 .carousel-showcase__arrow-right {
     background-image: url(./assets/arrow-right.png);
+    border-right: 1px solid #fff;
 }
 
 .carousel-showcase__slides {
@@ -108,7 +105,10 @@
 
 @media (any-hover: hover) {
     .carousel-showcase__arrows button:hover::before {
-        background-color: var(--carousel-showcase-bg-gradient-end);
         inset: 5%;
     }
+}
+
+.carousel-showcase__arrows button:active::before {
+    inset: 15%;
 }
