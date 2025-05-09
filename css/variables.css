@@ -1,47 +1,46 @@
 :root {
-	--color-general-bg-primary: #181d2d;
-	--color-general-bg-secondary: #141621;
-	--color-accent-bg: #382680;
+    --color-general-bg-primary: #181d2d;
+    --color-general-bg-secondary: #141621;
+    --color-accent-bg: #382680;
 
-	--color-text-general: #f9f8fb;
-	--color-heading: #fff;
-	--color-link: #f5c95c;
+    --color-text-general: #f9f8fb;
+    --color-heading: #fff;
+    --color-link: #f5c95c;
 
-	--box-shadow-general: 8px 0px 15px 0px #00000040, -8px 0px 15px 0px #00000040;
+    --box-shadow-general: 8px 0px 15px 0px #00000040, -8px 0px 15px 0px #00000040;
 
-	--font-family-primary: "Raleway", serif;
-	--font-family-secondary: "Philosopher", serif;
-	--font-family-accent: "Windsong", serif;
+    --font-family-primary: "Raleway", serif;
+    --font-family-secondary: "Philosopher", serif;
+    --font-family-accent: "Philosopher", serif;
+    
+    --font-size-medium: 1rem; /* 16px */
+    --font-size-medium-large: 1.5rem; /* 24px */
+    --font-size-large: 2rem; /* 32px */
+    --font-size-x-large: 4rem; /* 64px */
 
-	--font-size-small: 0.875rem; /* 14px */
-	--font-size-medium: 1rem; /* 16px */
-	--font-size-medium-large: 1.5rem; /* 24px */
-	--font-size-large: 2rem; /* 32px */
-	--font-size-x-large: 4rem; /* 64px */
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
 
-	--font-weight-regular: 400;
-	--font-weight-bold: 700;
+    --spacing-small: 0.5rem; /* 8px */
+    --spacing-medium: 1rem; /* 16px */
+    --spacing-large: 1.5rem; /* 24px */
+    --spacing-x-large: 2rem; /* 32px */
 
-	--spacing-small: 0.5rem; /* 8px */
-	--spacing-medium: 1rem; /* 16px */
-	--spacing-large: 1.5rem; /* 24px */
-	--spacing-x-large: 2rem; /* 32px */
-
-	--max-width-content: 56rem; /* 896px */
+    --max-width-content: 56rem; /* 896px */
 }
 
 /* 720px */
 @media only screen and (max-width: 45em) {
-	:root {
-		--font-size-large: 1.75rem; /* 28px */
-		--font-size-x-large: 3rem; /* 48px */
-	}
+    :root {
+        --font-size-large: 1.75rem; /* 28px */
+        --font-size-x-large: 3rem; /* 48px */
+    }
 }
 
 /* 480px */
 @media only screen and (max-width: 30em) {
-	:root {
-		--font-size-large: 1.5rem; /* 24px */
-		--font-size-x-large: 2.5rem; /* 40px */
-	}
+    :root {
+        --font-size-large: 1.5rem; /* 24px */
+        --font-size-x-large: 2.5rem; /* 40px */
+    }
 }

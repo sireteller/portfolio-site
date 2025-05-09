@@ -1,19 +1,19 @@
 class SweetHeading3 extends HTMLElement {
-	constructor() {
-		super();
-	}
+    constructor() {
+        super();
+    }
 
-	connectedCallback() {
-		this.attachShadow({ mode: "open" });
-		this.shadowRoot.innerHTML = `
+    connectedCallback() {
+        this.attachShadow({mode: "open"});
+        this.shadowRoot.innerHTML = `
         <style>@import url("./css/index.css");</style>
 
-        <h2 class="heading-3">
+        <h3 class="heading-3">
             <span class="heading-3__text">
                 <slot></slot>
             </span>
-        </h2>`;
-	}
+        </h3>`;
+    }
 }
 
 customElements.define("sweet-heading-3", SweetHeading3);

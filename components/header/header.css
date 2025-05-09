@@ -1,70 +1,70 @@
 .header {
-	align-items: center;
-	background-color: var(--color-general-bg-secondary);
-	color: var(--color-heading);
-	display: flex;
-	min-height: 15rem;
-	padding: 0 var(--spacing-large);
-	position: relative;
+    align-items: center;
+    background-color: var(--color-general-bg-secondary);
+    color: var(--color-heading);
+    display: flex;
+    min-height: 15rem;
+    padding: 0 var(--spacing-large);
+    position: relative;
 }
 
 .header-stripe {
-	height: 100%;
-	margin: 0 auto;
-	max-width: var(--max-width-content);
-	min-height: 15rem;
-	padding: var(--spacing-x-large) 0;
-	position: relative;
-	width: 100%;
-	z-index: 2;
+    height: 100%;
+    margin: 0 auto;
+    max-width: var(--max-width-content);
+    min-height: 15rem;
+    padding: var(--spacing-x-large) 0;
+    position: relative;
+    width: 100%;
+    z-index: 2;
 }
 
 .header-stripe-text {
-	max-width: var(--max-width-content);
-	padding-left: var(--spacing-medium);
-	position: relative;
-	width: 100%;
+    max-width: var(--max-width-content);
+    padding-left: var(--spacing-medium);
+    position: relative;
+    width: 100%;
 }
 
 .header-stripe-text::before {
-	background-color: var(--color-heading);
-	bottom: 10%;
-	content: "";
-	left: 0;
-	position: absolute;
-	top: 10%;
-	width: 1px;
+    background-color: var(--color-heading);
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    top: 10%;
+    width: 1px;
 }
 
 .header-title {
-	font-family: var(--font-family-accent);
-	font-size: var(--font-size-x-large);
-	font-weight: var(--font-weight-regular);
+    font-family: var(--font-family-accent);
+    font-size: var(--font-size-x-large);
+    font-weight: var(--font-weight-regular);
 }
 
 .header-subtitle {
-	font-family: var(--font-family-secondary);
-	font-size: var(--font-size-medium);
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-medium);
 }
 
 .header-img-overlay {
-	position: absolute;
-	z-index: 2;
+    position: absolute;
+    z-index: 2;
 }
 
 .header-img-overlay.header-img-overlay--small {
-	top: var(--spacing-medium);
+    top: var(--spacing-medium);
 }
 
 .header-img-overlay.header-img-overlay--large {
-	bottom: -15%;
-	max-height: 100%;
-	right: 0;
+    bottom: -15%;
+    max-height: 100%;
+    right: 0;
 }
 
 /* 480px */
 @media only screen and (max-width: 30em) {
-	.header-img-overlay.header-img-overlay--large {
-		max-height: 80%;
-	}
+    .header-img-overlay.header-img-overlay--large {
+        max-height: 80%;
+    }
 }
