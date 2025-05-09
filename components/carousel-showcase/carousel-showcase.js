@@ -18,13 +18,15 @@ class SweetCarouselShowcase extends HTMLElement {
         this.shadowRoot.innerHTML = `
         <style>@import url("./css/index.css");</style>
 
-			<div class="grid-duo grid-duo--no-gap">
+			<div class="grid-duo grid-duo--no-gap" role="group" aria-labelledby="title">
 				<div class="carousel-showcase__info-side">
-					<slot name="title"></slot>
+				    <span id="title">
+					    <slot name="title"></slot>
+					    <span class="sr-only">
+					        carousel
+                        </span>
+					</span>
                     <div class="carousel-showcase__info-side-inner">
-					    <slot name="intro"></slot>
-                        <hr/>
-                        
                         <div class="carousel-showcase__arrows">
 							<button class="carousel-showcase__arrow-left" aria-label="Previous slide"></button>
 							<button class="carousel-showcase__arrow-right" aria-label="Next slide"></button>
